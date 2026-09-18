@@ -6,11 +6,11 @@ const cities = {
   Tehran:{fa:'تهران',coord:[51.389,35.689]},
   Karaj:{fa:'کرج',coord:[50.967,35.840]},
   Izeh:{fa:'ایذه',coord:[49.867,31.833]},
-  Mashhad:{fa:'مشهد',coord:[59.616,36.297]}
+  Mashhad:{fa:'مشهد',coord:[59.616,36.297]},
+  Zahedan:{fa:'زاهدان',coord:[60.862,29.497]}
 };
 const project = ([lon,lat]) => [345+(lon-44)*27,120+(40-lat)*30.5];
-const slots = [{x:48,y:3,r:3},{x:12.5,y:18,r:-5},{x:7.3,y:54,r:3},{x:35,y:64,r:-3},{x:78,y:22,r:4},{x:76,y:62,r:-4}];
-let currentView = matchMedia('(max-width:640px)').matches ? 'portraits' : 'atlas';
+const slots = [{x:36,y:1,r:2},{x:7,y:13,r:-3},{x:7,y:52,r:2},{x:27,y:65,r:-2},{x:79,y:6,r:3},{x:79,y:37,r:-2},{x:58,y:2,r:-2},{x:78,y:68,r:2},{x:47,y:66,r:2}];
 let lastTrigger = null;
 
 function drawMap(){
@@ -40,11 +40,9 @@ function render(){
   const query=$('#search').value.trim().toLocaleLowerCase(),city=$('#cityFilter').value;
   const visible=people.filter(p=>(!city||p.city===city)&&`${p.name} ${p.persian} ${p.city} ${p.year} ${p.tags||''}`.toLocaleLowerCase().includes(query));
   const ids=new Set(visible.map(p=>p.id));
-  $('#atlasViewport').hidden=currentView!=='atlas'||!visible.length;
-  $('#portraitGrid').hidden=currentView!=='portraits'||!visible.length;
+  $('#atlasViewport').hidden=!visible.length;
   $('#emptyState').hidden=!!visible.length;
   $('#atlasPortraits').innerHTML=people.map(makeCard).join('');
-  $('#portraitGrid').innerHTML=visible.map(p=>makeCard(p,people.indexOf(p))).join('');
   document.querySelectorAll('.memory-card').forEach(card=>{
     const isVisible=ids.has(card.dataset.id);
     card.classList.toggle('is-dim',!isVisible);
@@ -58,7 +56,6 @@ function render(){
   });
   document.querySelectorAll('[data-thread]').forEach(path=>path.classList.toggle('is-dim',!ids.has(path.dataset.thread)));
   document.querySelectorAll('.map-city').forEach(pin=>{pin.classList.toggle('active',city===pin.dataset.city);pin.classList.toggle('is-dim',!visible.some(p=>p.city===pin.dataset.city));pin.setAttribute('aria-pressed',String(city===pin.dataset.city));});
-  document.querySelectorAll('[data-view]').forEach(button=>{const active=button.dataset.view===currentView;button.classList.toggle('selected',active);button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
   const countCities=new Set(visible.map(p=>p.city)).size;
   $('#resultCount').textContent=`${String(visible.length).padStart(2,'0')} ${visible.length===1?'remembered life':'remembered lives'} · ${countCities} ${countCities===1?'city':'cities'}${city?' · '+city:''}`;
   $('#resetFilters').hidden=!query&&!city;
@@ -79,7 +76,6 @@ function clearFilters(){$('#search').value='';$('#cityFilter').value='';render()
 function populateCredits(){
   $('#creditsContent').innerHTML=`<h3>People & their stories</h3><p>Portraits are reproduced from the linked source records for this private design preview. Copyright remains with the respective owners.</p><ul>${people.map(p=>`<li><strong>${escapeHTML(p.name)}</strong> — ${p.sources.map(s=>`<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.title)}</a>`).join('; ')}<br>${escapeHTML(p.credit)}</li>`).join('')}</ul><h3>The painted pages</h3><p>Historical manuscript artwork from museum open-access collections.</p><ul>${art.map(a=>`<li><a href="${escapeHTML(a.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(a.title)}</a><br>${escapeHTML(a.date)} · ${escapeHTML(a.museum)} · ${escapeHTML(a.license)}</li>`).join('')}</ul><h3>Map</h3><p>Country outline: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth, public domain</a>. The outline is generalized. Pins use approximate city centers. The fine contour lines are decoration, not surveyed topography.</p>`;
 }
-document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{currentView=button.dataset.view;render();}));
 $('#search').addEventListener('input',render);$('#cityFilter').addEventListener('change',render);
 $('#resetFilters').addEventListener('click',clearFilters);$('#emptyReset').addEventListener('click',clearFilters);
 $('#aboutButton').addEventListener('click',()=>$('#aboutDialog').showModal());$('#creditsButton').addEventListener('click',()=>$('#creditsDialog').showModal());

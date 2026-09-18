@@ -6,20 +6,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="atlas.css?v=2"><link rel="stylesheet" href="persian-theme.css?v=2"><link rel="stylesheet" href="sculpture.css?v=2">
-<script type="module" src="assets/vendor/model-viewer.min.js"></script><script src="assets/data.js?v=1" defer></script><script src="sculpture.js?v=2" defer></script><script src="atlas.js?v=2" defer></script>
+<script type="module" src="assets/vendor/model-viewer.min.js"></script><script src="assets/data.js?v=3" defer></script><script src="sculpture.js?v=2" defer></script><script src="atlas.js?v=4" defer></script>
 <link rel="stylesheet" href="particles.css?v=1"><script src="particles.js?v=1" defer></script></head>
 <body>
 <div class="manuscript-edge" aria-hidden="true"></div>
 <div class="page">
 <header class="masthead">
 <a class="brand" href="./" aria-label="Khaneh home"><span class="brand-fa" lang="fa" dir="rtl">خانه</span><span class="brand-en">KHANEH<span>A HOME FOR MEMORY</span></span></a>
-<nav aria-label="Main navigation"><button class="nav-link active" data-view="atlas">The atlas</button><button class="nav-link" data-view="portraits">The portraits</button><button class="nav-link" id="aboutButton">About Khaneh</button></nav>
+<nav aria-label="Main navigation"><button class="nav-link" id="aboutButton">About Khaneh</button></nav>
 <span class="dedication"><span aria-hidden="true">✧</span> So they are remembered.</span>
 </header>
 <main>
-<section class="introduction" aria-labelledby="pageTitle"><div><p class="eyebrow">IRAN · AN ATLAS OF REMEMBRANCE</p><h1 id="pageTitle">Every life, <em>a world.</em></h1></div><div class="intro-note"><p>A home for the people we must not forget.<br>Follow a thread from a portrait to a place,<br>and discover the life behind a name.</p><span lang="fa" dir="rtl">برای آن‌که فراموش نکنیم</span></div></section>
+<section class="introduction" aria-labelledby="pageTitle"><div><p class="eyebrow">IRAN · AN ATLAS OF REMEMBRANCE</p><h1 id="pageTitle">Every life, <em>a world.</em></h1></div><div class="intro-note"><p>A home for the people we must not forget.<br>Follow a thread from a portrait to a place,<br>and discover the life behind a name.</p></div></section>
 <section class="atlas-section" aria-label="Memorial archive">
-<div class="archive-toolbar"><div class="view-switch" aria-label="Archive view"><button class="selected" data-view="atlas" aria-pressed="true"><span aria-hidden="true">⌖</span> Memory atlas</button><button data-view="portraits" aria-pressed="false"><span aria-hidden="true">▦</span> Portraits</button></div><div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search names or cities</span><input id="search" type="search" placeholder="Find a name or a city…" autocomplete="off"></label><label class="city-field"><span class="sr-only">Filter by city</span><select id="cityFilter"><option value="">All cities</option></select></label><button class="reset" id="resetFilters" hidden>Clear</button></div></div>
+<div class="archive-toolbar"><span class="eyebrow">THE MEMORY ATLAS</span><div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search names or cities</span><input id="search" type="search" placeholder="Find a name or a city…" autocomplete="off"></label><label class="city-field"><span class="sr-only">Filter by city</span><select id="cityFilter"><option value="">All cities</option></select></label><button class="reset" id="resetFilters" hidden>Clear</button></div></div>
 <div class="atlas-viewport" id="atlasViewport"><div class="atlas-board" id="atlasBoard">
 <div class="painted-corner painted-left" aria-hidden="true"></div><div class="painted-corner painted-right" aria-hidden="true"></div>
 <div class="board-caption"><span>THE MEMORY ATLAS</span><span>People & places of Iran</span></div><div class="compass" aria-hidden="true"><span>N</span>✧</div>
@@ -27,7 +27,7 @@
 <div class="atlas-inscription" aria-hidden="true"><span lang="fa">ایران</span><i>A thousand stories.<br>One home.</i></div>
 <div class="board-key"><span class="key-pin"></span> City where the person died <span class="key-thread"></span> A connection to their story</div><div class="board-page">KHANEH / FOLIO 01</div>
 </div></div>
-<div id="portraitGrid" class="portrait-grid" hidden></div><div class="empty-state" id="emptyState" hidden><span>✧</span><h2>No matching memories</h2><p>Try another name or return to all cities.</p><button id="emptyReset">Show all portraits</button></div>
+<div class="empty-state" id="emptyState" hidden><span>✧</span><h2>No matching memories</h2><p>Try another name or return to all cities.</p><button id="emptyReset">Show all portraits</button></div>
 <div class="archive-status"><span id="resultCount" aria-live="polite"></span><span>Choose a portrait to open its story <span aria-hidden="true">↗</span></span></div>
 </section>
 <section class="closing-note"><span class="flourish" aria-hidden="true">❦</span><p>More than a moment in history.<br><em>A life, with a story of its own.</em></p><span class="closing-aside">A growing collection, across generations.<br>Sources accompany every memory.</span></section>
