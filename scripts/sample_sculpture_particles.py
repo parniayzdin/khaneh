@@ -16,7 +16,7 @@ total = 0
 for obj in bpy.context.scene.objects:
     name = obj.name.lower()
     if obj.type not in ('MESH', 'CURVE') or obj.hide_render or not name.startswith(('carrier', 'passenger')) or any(word in name for word in
-            ('plinth', 'brow', 'eye', 'lip', 'nose', 'nostril', 'hair strand', 'mouth', 'finger division', 'supporting fingers', 'lace', 'seam', 'stitch', 'zipper', 'knuckle')):
+            ('plinth', 'brow', 'eye', 'lip', 'nose', 'nostril', 'hair strand', 'mouth', 'finger division', 'supporting fingers', 'lace', 'seam', 'stitch', 'zipper', 'knuckle', 'pocket', 'belt loop', 'fold', 'wrinkle', 'sleeve band', 'drawstring')):
         continue
     evaluated = obj.evaluated_get(depsgraph)
     mesh = evaluated.to_mesh()
