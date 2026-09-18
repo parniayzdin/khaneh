@@ -162,3 +162,6 @@ footer > span:first-child { color: #425a66; }
 .card-photo{display:block;overflow:hidden}
 .memory-card[data-id='mani'] .card-image{transform:scale(1.35);transform-origin:50% 20%}
 
+
+.memory-dialog[data-person-id='mani'] .memory-art > img{width:100%;height:auto;aspect-ratio:6/5;object-fit:cover;object-position:center top}
+
