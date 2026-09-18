@@ -1,0 +1,33 @@
+{
+  "title": "Hamid Mahdavi \u2014 a carrying study",
+  "kind": "Original interpretive white memorial maquette",
+  "note": "Pose study from a supplied reference; facial features are sculptural interpretations, not a verified likeness.",
+  "coordinates": "glTF +Y up, meters",
+  "bounds": {
+    "min": [
+      -1.2300000190734863,
+      -0.07999999821186066,
+      -0.6299999952316284
+    ],
+    "max": [
+      0.9300000667572021,
+      2.0090866088867188,
+      0.6299999952316284
+    ]
+  },
+  "cameraPosition": [
+    2.5,
+    2.9,
+    8.5
+  ],
+  "cameraTarget": [
+    -0.1,
+    1.04,
+    0
+  ],
+  "recommendedOrbit": "17deg 78deg 112%",
+  "polygons": 133635,
+  "triangles": 224347,
+  "materials": "One unpigmented white plaster material; no textures or color maps",
+  "compression": "Uncompressed GLB; no decoder or external asset dependencies"
+}
