@@ -28,9 +28,9 @@
     "city": "Tehran",
     "year": 2022,
     "date": "September 2022",
-    "image": "assets/portraits/nika-shakarami.jpg",
+    "image": "assets/portraits/nika-user.png",
     "story": "Nika loved drawing and worked in a Tehran café. Those close to her remembered her independence and artistic talent. She disappeared during the September protests and was later found dead. Her family disputed the authorities’ account; the Omid Memorial documents the differing accounts.",
-    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "credit": "Portrait supplied by the project owner. Original photographer and publication rights are not yet documented.",
     "sources": [
       {
         "title": "Abdorrahman Boroumand Center · Omid Memorial",
@@ -62,9 +62,9 @@
     "city": "Izeh",
     "year": 2022,
     "date": "16 November 2022",
-    "image": "assets/portraits/kian-pirfalak.jpg",
+    "image": "assets/portraits/kian-user.png",
     "story": "Kian was nine. He loved animals, reading, and imagining a future in space or robotics. He died when his family’s car came under fire in Izeh during the unrest. His family’s account of the shooting differed from the official account.",
-    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "credit": "Portrait supplied by the project owner. Original photographer and publication rights are not yet documented.",
     "sources": [
       {
         "title": "Abdorrahman Boroumand Center · Omid Memorial",
@@ -100,13 +100,79 @@
     "city": "Tehran",
     "year": 2009,
     "date": "20 June 2009",
-    "image": "assets/portraits/neda-aqa-soltan.jpg",
+    "image": "assets/portraits/neda-user.png",
     "story": "Neda loved music and travel and had taken classes to become a tour guide. She was shot and killed in Tehran during the protests following the 2009 presidential election. Her memorial record preserves recollections from people who knew her.",
-    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "credit": "Portrait supplied by the project owner. Original photographer and publication rights are not yet documented.",
     "sources": [
       {
         "title": "Abdorrahman Boroumand Center · Omid Memorial",
         "url": "https://www.iranrights.org/memorial/story/61073/neda-aqa-soltan"
+      }
+    ]
+  },
+  {
+    "id": "mani",
+    "name": "Mani Safarpour",
+    "persian": "مانی صفرپور",
+    "city": "Tehran",
+    "year": 2026,
+    "date": "8 January 2026",
+    "image": "assets/portraits/mani-safarpour.png",
+    "tags": "Mani Safarpur Chafali Salsabil Lahijan",
+    "story": "Mani was 18 and loved football, especially Persepolis. He lived in Tehran’s Salsabil neighborhood and had two sisters. The Abdorrahman Boroumand Center reports that security forces shot and killed him during the protests on 8 January 2026. His family remembered his honesty and kind heart. He was buried near Lahijan, in Gilan.",
+    "credit": "Portrait supplied by the project owner. Original photographer and publication rights are not yet documented.",
+    "sources": [
+      {
+        "title": "Abdorrahman Boroumand Center · Mani’s life and documented account",
+        "url": "https://www.iranrights.org/memorial/story/-9095/mani-safarpur-chafali"
+      },
+      {
+        "title": "Iran International · Report on Mani Safarpour",
+        "url": "https://www.iranintl.com/fa/202601283936"
+      }
+    ]
+  },
+  {
+    "id": "khodanoor",
+    "name": "Khodanoor Lajei",
+    "persian": "خدانور لجه‌ای",
+    "city": "Zahedan",
+    "year": 2022,
+    "date": "2 October 2022",
+    "image": "assets/portraits/khodanoor-lajei.png",
+    "tags": "Khodanour Khodanur Lojei Lajaei Baloch Baluch",
+    "story": "Khodanoor was a 27-year-old Baloch man from Shirabad, Zahedan. According to relatives’ accounts reviewed by Factnameh, he was wounded by gunfire in the unrest after Bloody Friday and died in hospital on 2 October 2022. Factnameh examines the conflicting official account and the evidence against it. A widely shared photograph of him bound to a pole came from an earlier detention, not the day he died.",
+    "credit": "Portrait supplied by the project owner. Original photographer and publication rights are not yet documented.",
+    "sources": [
+      {
+        "title": "Factnameh · Accounts of Khodanoor’s life, detention and death",
+        "url": "https://factnameh.com/fa/fact-checks/2022-11-11-iran-khodanour-death"
+      },
+      {
+        "title": "Abdorrahman Boroumand Center · Memorial record",
+        "url": "https://www.iranrights.org/memorial/story/86846/khodanur-sadeq-loje-i-kabdani"
+      }
+    ]
+  },
+  {
+    "id": "hadis",
+    "name": "Hadis Najafi",
+    "persian": "حدیث نجفی",
+    "city": "Karaj",
+    "year": 2022,
+    "date": "21 September 2022",
+    "image": "assets/portraits/hadis-najafi.png",
+    "tags": "Hadith Najafi Mehrshahr",
+    "story": "Hadis shared moments of her life on TikTok and Instagram. Before joining the protests, she spoke of hoping that her future self would be glad she had taken part. A United Nations communication reports that security forces shot her while she was peacefully demonstrating in Karaj on 21 September 2022. Her family disputed the authorities’ account of her death.",
+    "credit": "Portrait supplied by the project owner. Original photographer and publication rights are not yet documented.",
+    "sources": [
+      {
+        "title": "United Nations · Communication on the September 2022 crackdown",
+        "url": "https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=27620"
+      },
+      {
+        "title": "ITV News · Hadis’s life and her family’s account",
+        "url": "https://www.itv.com/news/2022-09-30/iranian-tiktoker-hadis-najafi-23-shot-dead-during-demonstrations-in-karaj"
       }
     ]
   }
