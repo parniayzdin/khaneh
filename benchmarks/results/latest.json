@@ -1,0 +1,2674 @@
+{
+  "timestamp_utc": "2026-09-18T16:31:24.482870+00:00",
+  "git_commit": "2fcca4165216c9eaa4a19f13f78fa0239afd92f1",
+  "tracked_changes": [
+    ".gitignore",
+    "README.md",
+    "outputs/khaneh-portraits/README.md",
+    "outputs/khaneh-portraits/assets/art/credits.json",
+    "outputs/khaneh-portraits/assets/sculpture/hamid-carrying-white.blend",
+    "outputs/khaneh-portraits/assets/sculpture/sculpture-metadata.json",
+    "outputs/khaneh-portraits/assets/vendor/model-viewer-package.json",
+    "outputs/khaneh-portraits/atlas.css",
+    "outputs/khaneh-portraits/atlas.html",
+    "outputs/khaneh-portraits/atlas.js",
+    "outputs/khaneh-portraits/index-updated.html",
+    "outputs/khaneh-portraits/index.html",
+    "outputs/khaneh-portraits/particles.css",
+    "outputs/khaneh-portraits/persian-theme.css",
+    "outputs/khaneh-portraits/sculpture.css",
+    "outputs/khaneh-portraits/sculpture.js",
+    "outputs/khaneh-search/app.py",
+    "scripts/preview.cjs"
+  ],
+  "environment": {
+    "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "logical_cpus": 16,
+    "client": "Python urllib; new connection per request",
+    "cpu": "AMD Ryzen 9 5900HX with Radeon Graphics"
+  },
+  "settings": {
+    "base_url": "http://127.0.0.1:8082",
+    "requests": 500,
+    "concurrency": 10,
+    "answer_repeats": 5
+  },
+  "ai_health": {
+    "status": "ready",
+    "device": "cpu",
+    "stories": 9,
+    "passages": 19,
+    "answer_mode": "extractive",
+    "language": "English",
+    "live_web_search": false
+  },
+  "scope": "Small, hand-authored development set. Not a held-out or representative evaluation. Answer checks are substring/status assertions, not human judgments of complete factual correctness.",
+  "hashes": {
+    "benchmarks/cases.json": "dd9cba47690385cca6734e345a776c95701cb415636a12f4fc71c3e7741c92b5",
+    "outputs/khaneh-search/app.py": "5ebaa37dbe88d4c9825531c6db9c4c4503b67a7ceb068915762f92ebbd62a38b",
+    "outputs/khaneh-search/source_notes.json": "6bf493714185874129904e141eed76068ae143e09940cde9253f5aa765cb66f6",
+    "outputs/khaneh-portraits/assets/portraits/records.json": "8f2614ac522360079a87117b6ff36c0fa6a83d09ce72db8d4f7f31cb36496a23"
+  },
+  "people_api": {
+    "requests": 500,
+    "successful": 500,
+    "failed": 0,
+    "p50_ms": 4.66,
+    "p95_ms": 7.78,
+    "p99_ms": 10.05,
+    "elapsed_seconds": 0.255,
+    "successful_requests_per_second": 1961.7,
+    "raw_requests": [
+      {
+        "ms": 1.663
+      },
+      {
+        "ms": 1.713
+      },
+      {
+        "ms": 7.378
+      },
+      {
+        "ms": 2.574
+      },
+      {
+        "ms": 4.28
+      },
+      {
+        "ms": 5.304
+      },
+      {
+        "ms": 4.039
+      },
+      {
+        "ms": 10.733
+      },
+      {
+        "ms": 11.006
+      },
+      {
+        "ms": 8.613
+      },
+      {
+        "ms": 9.101
+      },
+      {
+        "ms": 9.269
+      },
+      {
+        "ms": 12.965
+      },
+      {
+        "ms": 6.461
+      },
+      {
+        "ms": 5.738
+      },
+      {
+        "ms": 6.957
+      },
+      {
+        "ms": 3.55
+      },
+      {
+        "ms": 2.786
+      },
+      {
+        "ms": 3.6
+      },
+      {
+        "ms": 3.595
+      },
+      {
+        "ms": 6.675
+      },
+      {
+        "ms": 4.104
+      },
+      {
+        "ms": 4.192
+      },
+      {
+        "ms": 3.391
+      },
+      {
+        "ms": 4.75
+      },
+      {
+        "ms": 6.379
+      },
+      {
+        "ms": 6.221
+      },
+      {
+        "ms": 6.769
+      },
+      {
+        "ms": 6.118
+      },
+      {
+        "ms": 5.108
+      },
+      {
+        "ms": 3.221
+      },
+      {
+        "ms": 6.56
+      },
+      {
+        "ms": 3.169
+      },
+      {
+        "ms": 2.629
+      },
+      {
+        "ms": 6.652
+      },
+      {
+        "ms": 3.257
+      },
+      {
+        "ms": 5.635
+      },
+      {
+        "ms": 8.453
+      },
+      {
+        "ms": 6.01
+      },
+      {
+        "ms": 4.523
+      },
+      {
+        "ms": 5.065
+      },
+      {
+        "ms": 5.08
+      },
+      {
+        "ms": 5.537
+      },
+      {
+        "ms": 7.106
+      },
+      {
+        "ms": 4.432
+      },
+      {
+        "ms": 5.558
+      },
+      {
+        "ms": 4.904
+      },
+      {
+        "ms": 5.825
+      },
+      {
+        "ms": 4.995
+      },
+      {
+        "ms": 5.788
+      },
+      {
+        "ms": 5.194
+      },
+      {
+        "ms": 4.662
+      },
+      {
+        "ms": 5.582
+      },
+      {
+        "ms": 5.566
+      },
+      {
+        "ms": 7.467
+      },
+      {
+        "ms": 5.53
+      },
+      {
+        "ms": 4.023
+      },
+      {
+        "ms": 5.232
+      },
+      {
+        "ms": 4.6
+      },
+      {
+        "ms": 8.89
+      },
+      {
+        "ms": 7.039
+      },
+      {
+        "ms": 1.851
+      },
+      {
+        "ms": 3.517
+      },
+      {
+        "ms": 3.63
+      },
+      {
+        "ms": 5.672
+      },
+      {
+        "ms": 7.45
+      },
+      {
+        "ms": 6.109
+      },
+      {
+        "ms": 4.225
+      },
+      {
+        "ms": 2.454
+      },
+      {
+        "ms": 3.556
+      },
+      {
+        "ms": 3.155
+      },
+      {
+        "ms": 5.786
+      },
+      {
+        "ms": 11.66
+      },
+      {
+        "ms": 5.854
+      },
+      {
+        "ms": 4.468
+      },
+      {
+        "ms": 2.485
+      },
+      {
+        "ms": 5.704
+      },
+      {
+        "ms": 5.875
+      },
+      {
+        "ms": 3.594
+      },
+      {
+        "ms": 3.637
+      },
+      {
+        "ms": 4.377
+      },
+      {
+        "ms": 5.582
+      },
+      {
+        "ms": 3.556
+      },
+      {
+        "ms": 5.436
+      },
+      {
+        "ms": 5.385
+      },
+      {
+        "ms": 2.903
+      },
+      {
+        "ms": 3.34
+      },
+      {
+        "ms": 5.135
+      },
+      {
+        "ms": 4.966
+      },
+      {
+        "ms": 2.794
+      },
+      {
+        "ms": 6.002
+      },
+      {
+        "ms": 6.817
+      },
+      {
+        "ms": 8.486
+      },
+      {
+        "ms": 3.869
+      },
+      {
+        "ms": 2.638
+      },
+      {
+        "ms": 5.51
+      },
+      {
+        "ms": 4.527
+      },
+      {
+        "ms": 5.389
+      },
+      {
+        "ms": 5.746
+      },
+      {
+        "ms": 5.257
+      },
+      {
+        "ms": 4.007
+      },
+      {
+        "ms": 5.513
+      },
+      {
+        "ms": 5.658
+      },
+      {
+        "ms": 10.075
+      },
+      {
+        "ms": 2.804
+      },
+      {
+        "ms": 3.711
+      },
+      {
+        "ms": 5.077
+      },
+      {
+        "ms": 8.855
+      },
+      {
+        "ms": 6.146
+      },
+      {
+        "ms": 2.509
+      },
+      {
+        "ms": 3.507
+      },
+      {
+        "ms": 4.873
+      },
+      {
+        "ms": 5.014
+      },
+      {
+        "ms": 4.822
+      },
+      {
+        "ms": 2.684
+      },
+      {
+        "ms": 4.927
+      },
+      {
+        "ms": 3.507
+      },
+      {
+        "ms": 4.814
+      },
+      {
+        "ms": 5.483
+      },
+      {
+        "ms": 6.715
+      },
+      {
+        "ms": 4.075
+      },
+      {
+        "ms": 3.186
+      },
+      {
+        "ms": 2.674
+      },
+      {
+        "ms": 4.872
+      },
+      {
+        "ms": 4.089
+      },
+      {
+        "ms": 7.008
+      },
+      {
+        "ms": 2.828
+      },
+      {
+        "ms": 5.358
+      },
+      {
+        "ms": 3.671
+      },
+      {
+        "ms": 5.137
+      },
+      {
+        "ms": 3.793
+      },
+      {
+        "ms": 6.445
+      },
+      {
+        "ms": 2.429
+      },
+      {
+        "ms": 6.0
+      },
+      {
+        "ms": 8.174
+      },
+      {
+        "ms": 2.916
+      },
+      {
+        "ms": 2.971
+      },
+      {
+        "ms": 3.633
+      },
+      {
+        "ms": 5.641
+      },
+      {
+        "ms": 4.049
+      },
+      {
+        "ms": 6.362
+      },
+      {
+        "ms": 5.445
+      },
+      {
+        "ms": 10.05
+      },
+      {
+        "ms": 2.66
+      },
+      {
+        "ms": 3.247
+      },
+      {
+        "ms": 4.231
+      },
+      {
+        "ms": 4.185
+      },
+      {
+        "ms": 7.9
+      },
+      {
+        "ms": 4.262
+      },
+      {
+        "ms": 4.974
+      },
+      {
+        "ms": 2.392
+      },
+      {
+        "ms": 5.442
+      },
+      {
+        "ms": 5.737
+      },
+      {
+        "ms": 4.938
+      },
+      {
+        "ms": 6.118
+      },
+      {
+        "ms": 2.958
+      },
+      {
+        "ms": 7.784
+      },
+      {
+        "ms": 6.712
+      },
+      {
+        "ms": 2.872
+      },
+      {
+        "ms": 4.439
+      },
+      {
+        "ms": 6.193
+      },
+      {
+        "ms": 7.185
+      },
+      {
+        "ms": 2.533
+      },
+      {
+        "ms": 5.813
+      },
+      {
+        "ms": 3.261
+      },
+      {
+        "ms": 9.497
+      },
+      {
+        "ms": 7.692
+      },
+      {
+        "ms": 6.135
+      },
+      {
+        "ms": 3.529
+      },
+      {
+        "ms": 7.441
+      },
+      {
+        "ms": 4.217
+      },
+      {
+        "ms": 3.535
+      },
+      {
+        "ms": 4.655
+      },
+      {
+        "ms": 6.179
+      },
+      {
+        "ms": 4.574
+      },
+      {
+        "ms": 5.78
+      },
+      {
+        "ms": 5.804
+      },
+      {
+        "ms": 6.813
+      },
+      {
+        "ms": 5.845
+      },
+      {
+        "ms": 7.101
+      },
+      {
+        "ms": 3.858
+      },
+      {
+        "ms": 4.713
+      },
+      {
+        "ms": 3.319
+      },
+      {
+        "ms": 5.36
+      },
+      {
+        "ms": 5.088
+      },
+      {
+        "ms": 7.222
+      },
+      {
+        "ms": 5.522
+      },
+      {
+        "ms": 8.285
+      },
+      {
+        "ms": 4.238
+      },
+      {
+        "ms": 5.849
+      },
+      {
+        "ms": 4.064
+      },
+      {
+        "ms": 5.759
+      },
+      {
+        "ms": 6.424
+      },
+      {
+        "ms": 3.047
+      },
+      {
+        "ms": 3.787
+      },
+      {
+        "ms": 3.064
+      },
+      {
+        "ms": 6.197
+      },
+      {
+        "ms": 5.662
+      },
+      {
+        "ms": 4.678
+      },
+      {
+        "ms": 8.872
+      },
+      {
+        "ms": 5.8
+      },
+      {
+        "ms": 7.038
+      },
+      {
+        "ms": 5.027
+      },
+      {
+        "ms": 4.295
+      },
+      {
+        "ms": 3.017
+      },
+      {
+        "ms": 4.7
+      },
+      {
+        "ms": 5.603
+      },
+      {
+        "ms": 6.471
+      },
+      {
+        "ms": 7.617
+      },
+      {
+        "ms": 2.263
+      },
+      {
+        "ms": 4.835
+      },
+      {
+        "ms": 3.961
+      },
+      {
+        "ms": 3.391
+      },
+      {
+        "ms": 4.33
+      },
+      {
+        "ms": 5.784
+      },
+      {
+        "ms": 3.431
+      },
+      {
+        "ms": 3.684
+      },
+      {
+        "ms": 7.396
+      },
+      {
+        "ms": 4.196
+      },
+      {
+        "ms": 3.389
+      },
+      {
+        "ms": 3.855
+      },
+      {
+        "ms": 6.02
+      },
+      {
+        "ms": 5.993
+      },
+      {
+        "ms": 3.548
+      },
+      {
+        "ms": 6.159
+      },
+      {
+        "ms": 3.179
+      },
+      {
+        "ms": 5.742
+      },
+      {
+        "ms": 1.618
+      },
+      {
+        "ms": 2.676
+      },
+      {
+        "ms": 5.37
+      },
+      {
+        "ms": 2.935
+      },
+      {
+        "ms": 7.148
+      },
+      {
+        "ms": 3.405
+      },
+      {
+        "ms": 5.35
+      },
+      {
+        "ms": 6.09
+      },
+      {
+        "ms": 3.94
+      },
+      {
+        "ms": 3.563
+      },
+      {
+        "ms": 2.74
+      },
+      {
+        "ms": 5.837
+      },
+      {
+        "ms": 4.387
+      },
+      {
+        "ms": 2.219
+      },
+      {
+        "ms": 6.111
+      },
+      {
+        "ms": 5.685
+      },
+      {
+        "ms": 3.036
+      },
+      {
+        "ms": 3.517
+      },
+      {
+        "ms": 5.339
+      },
+      {
+        "ms": 5.437
+      },
+      {
+        "ms": 2.982
+      },
+      {
+        "ms": 4.041
+      },
+      {
+        "ms": 4.53
+      },
+      {
+        "ms": 4.925
+      },
+      {
+        "ms": 5.584
+      },
+      {
+        "ms": 4.382
+      },
+      {
+        "ms": 2.891
+      },
+      {
+        "ms": 4.084
+      },
+      {
+        "ms": 3.338
+      },
+      {
+        "ms": 3.862
+      },
+      {
+        "ms": 4.21
+      },
+      {
+        "ms": 4.461
+      },
+      {
+        "ms": 4.649
+      },
+      {
+        "ms": 4.783
+      },
+      {
+        "ms": 3.453
+      },
+      {
+        "ms": 6.453
+      },
+      {
+        "ms": 4.389
+      },
+      {
+        "ms": 4.612
+      },
+      {
+        "ms": 5.627
+      },
+      {
+        "ms": 4.128
+      },
+      {
+        "ms": 3.912
+      },
+      {
+        "ms": 4.462
+      },
+      {
+        "ms": 5.461
+      },
+      {
+        "ms": 5.781
+      },
+      {
+        "ms": 3.996
+      },
+      {
+        "ms": 3.522
+      },
+      {
+        "ms": 3.554
+      },
+      {
+        "ms": 4.115
+      },
+      {
+        "ms": 9.604
+      },
+      {
+        "ms": 6.066
+      },
+      {
+        "ms": 5.002
+      },
+      {
+        "ms": 3.574
+      },
+      {
+        "ms": 4.71
+      },
+      {
+        "ms": 2.794
+      },
+      {
+        "ms": 4.074
+      },
+      {
+        "ms": 4.501
+      },
+      {
+        "ms": 6.03
+      },
+      {
+        "ms": 5.16
+      },
+      {
+        "ms": 3.951
+      },
+      {
+        "ms": 4.512
+      },
+      {
+        "ms": 5.343
+      },
+      {
+        "ms": 1.491
+      },
+      {
+        "ms": 4.509
+      },
+      {
+        "ms": 3.654
+      },
+      {
+        "ms": 4.679
+      },
+      {
+        "ms": 2.754
+      },
+      {
+        "ms": 6.646
+      },
+      {
+        "ms": 3.935
+      },
+      {
+        "ms": 3.867
+      },
+      {
+        "ms": 6.004
+      },
+      {
+        "ms": 2.616
+      },
+      {
+        "ms": 3.167
+      },
+      {
+        "ms": 4.462
+      },
+      {
+        "ms": 6.099
+      },
+      {
+        "ms": 2.925
+      },
+      {
+        "ms": 4.659
+      },
+      {
+        "ms": 2.84
+      },
+      {
+        "ms": 2.996
+      },
+      {
+        "ms": 5.219
+      },
+      {
+        "ms": 5.151
+      },
+      {
+        "ms": 2.466
+      },
+      {
+        "ms": 6.484
+      },
+      {
+        "ms": 5.326
+      },
+      {
+        "ms": 3.911
+      },
+      {
+        "ms": 4.019
+      },
+      {
+        "ms": 6.107
+      },
+      {
+        "ms": 3.373
+      },
+      {
+        "ms": 3.383
+      },
+      {
+        "ms": 4.369
+      },
+      {
+        "ms": 4.045
+      },
+      {
+        "ms": 6.05
+      },
+      {
+        "ms": 4.069
+      },
+      {
+        "ms": 3.309
+      },
+      {
+        "ms": 3.411
+      },
+      {
+        "ms": 2.497
+      },
+      {
+        "ms": 5.931
+      },
+      {
+        "ms": 4.508
+      },
+      {
+        "ms": 5.979
+      },
+      {
+        "ms": 4.728
+      },
+      {
+        "ms": 6.352
+      },
+      {
+        "ms": 4.707
+      },
+      {
+        "ms": 2.345
+      },
+      {
+        "ms": 3.123
+      },
+      {
+        "ms": 4.477
+      },
+      {
+        "ms": 6.037
+      },
+      {
+        "ms": 4.724
+      },
+      {
+        "ms": 6.342
+      },
+      {
+        "ms": 4.068
+      },
+      {
+        "ms": 2.648
+      },
+      {
+        "ms": 5.161
+      },
+      {
+        "ms": 4.089
+      },
+      {
+        "ms": 3.536
+      },
+      {
+        "ms": 8.458
+      },
+      {
+        "ms": 4.053
+      },
+      {
+        "ms": 8.01
+      },
+      {
+        "ms": 6.038
+      },
+      {
+        "ms": 3.633
+      },
+      {
+        "ms": 5.989
+      },
+      {
+        "ms": 4.866
+      },
+      {
+        "ms": 4.407
+      },
+      {
+        "ms": 3.761
+      },
+      {
+        "ms": 6.213
+      },
+      {
+        "ms": 4.653
+      },
+      {
+        "ms": 6.645
+      },
+      {
+        "ms": 5.689
+      },
+      {
+        "ms": 6.02
+      },
+      {
+        "ms": 3.959
+      },
+      {
+        "ms": 6.505
+      },
+      {
+        "ms": 5.303
+      },
+      {
+        "ms": 4.165
+      },
+      {
+        "ms": 5.816
+      },
+      {
+        "ms": 1.991
+      },
+      {
+        "ms": 4.707
+      },
+      {
+        "ms": 4.106
+      },
+      {
+        "ms": 6.269
+      },
+      {
+        "ms": 3.209
+      },
+      {
+        "ms": 5.465
+      },
+      {
+        "ms": 3.736
+      },
+      {
+        "ms": 3.858
+      },
+      {
+        "ms": 9.725
+      },
+      {
+        "ms": 4.172
+      },
+      {
+        "ms": 4.165
+      },
+      {
+        "ms": 6.435
+      },
+      {
+        "ms": 6.53
+      },
+      {
+        "ms": 5.126
+      },
+      {
+        "ms": 3.555
+      },
+      {
+        "ms": 4.85
+      },
+      {
+        "ms": 5.01
+      },
+      {
+        "ms": 3.439
+      },
+      {
+        "ms": 4.643
+      },
+      {
+        "ms": 5.661
+      },
+      {
+        "ms": 3.22
+      },
+      {
+        "ms": 5.149
+      },
+      {
+        "ms": 4.43
+      },
+      {
+        "ms": 3.14
+      },
+      {
+        "ms": 2.466
+      },
+      {
+        "ms": 5.818
+      },
+      {
+        "ms": 5.099
+      },
+      {
+        "ms": 3.753
+      },
+      {
+        "ms": 5.942
+      },
+      {
+        "ms": 3.661
+      },
+      {
+        "ms": 6.201
+      },
+      {
+        "ms": 7.187
+      },
+      {
+        "ms": 4.343
+      },
+      {
+        "ms": 2.792
+      },
+      {
+        "ms": 4.156
+      },
+      {
+        "ms": 4.406
+      },
+      {
+        "ms": 3.728
+      },
+      {
+        "ms": 3.304
+      },
+      {
+        "ms": 4.527
+      },
+      {
+        "ms": 6.072
+      },
+      {
+        "ms": 3.244
+      },
+      {
+        "ms": 3.839
+      },
+      {
+        "ms": 3.338
+      },
+      {
+        "ms": 6.944
+      },
+      {
+        "ms": 4.097
+      },
+      {
+        "ms": 5.974
+      },
+      {
+        "ms": 6.415
+      },
+      {
+        "ms": 3.991
+      },
+      {
+        "ms": 4.234
+      },
+      {
+        "ms": 2.793
+      },
+      {
+        "ms": 4.478
+      },
+      {
+        "ms": 6.765
+      },
+      {
+        "ms": 3.504
+      },
+      {
+        "ms": 4.788
+      },
+      {
+        "ms": 2.523
+      },
+      {
+        "ms": 5.747
+      },
+      {
+        "ms": 4.761
+      },
+      {
+        "ms": 4.901
+      },
+      {
+        "ms": 4.441
+      },
+      {
+        "ms": 4.741
+      },
+      {
+        "ms": 5.477
+      },
+      {
+        "ms": 1.674
+      },
+      {
+        "ms": 3.52
+      },
+      {
+        "ms": 3.847
+      },
+      {
+        "ms": 4.639
+      },
+      {
+        "ms": 6.431
+      },
+      {
+        "ms": 8.287
+      },
+      {
+        "ms": 4.013
+      },
+      {
+        "ms": 2.956
+      },
+      {
+        "ms": 3.788
+      },
+      {
+        "ms": 3.954
+      },
+      {
+        "ms": 5.988
+      },
+      {
+        "ms": 3.981
+      },
+      {
+        "ms": 4.439
+      },
+      {
+        "ms": 4.181
+      },
+      {
+        "ms": 3.582
+      },
+      {
+        "ms": 6.752
+      },
+      {
+        "ms": 6.901
+      },
+      {
+        "ms": 3.876
+      },
+      {
+        "ms": 4.312
+      },
+      {
+        "ms": 5.853
+      },
+      {
+        "ms": 2.916
+      },
+      {
+        "ms": 5.072
+      },
+      {
+        "ms": 3.102
+      },
+      {
+        "ms": 2.659
+      },
+      {
+        "ms": 7.51
+      },
+      {
+        "ms": 4.789
+      },
+      {
+        "ms": 5.692
+      },
+      {
+        "ms": 5.386
+      },
+      {
+        "ms": 4.625
+      },
+      {
+        "ms": 5.419
+      },
+      {
+        "ms": 6.068
+      },
+      {
+        "ms": 5.534
+      },
+      {
+        "ms": 6.766
+      },
+      {
+        "ms": 4.387
+      },
+      {
+        "ms": 3.791
+      },
+      {
+        "ms": 8.21
+      },
+      {
+        "ms": 5.643
+      },
+      {
+        "ms": 2.958
+      },
+      {
+        "ms": 5.71
+      },
+      {
+        "ms": 5.931
+      },
+      {
+        "ms": 2.779
+      },
+      {
+        "ms": 2.774
+      },
+      {
+        "ms": 7.647
+      },
+      {
+        "ms": 5.47
+      },
+      {
+        "ms": 5.569
+      },
+      {
+        "ms": 4.663
+      },
+      {
+        "ms": 2.984
+      },
+      {
+        "ms": 4.573
+      },
+      {
+        "ms": 5.479
+      },
+      {
+        "ms": 4.117
+      },
+      {
+        "ms": 4.255
+      },
+      {
+        "ms": 4.966
+      },
+      {
+        "ms": 4.64
+      },
+      {
+        "ms": 3.68
+      },
+      {
+        "ms": 6.414
+      },
+      {
+        "ms": 9.047
+      },
+      {
+        "ms": 5.71
+      },
+      {
+        "ms": 3.575
+      },
+      {
+        "ms": 6.338
+      },
+      {
+        "ms": 4.814
+      },
+      {
+        "ms": 4.848
+      },
+      {
+        "ms": 4.777
+      },
+      {
+        "ms": 5.023
+      },
+      {
+        "ms": 1.848
+      },
+      {
+        "ms": 4.177
+      },
+      {
+        "ms": 5.604
+      },
+      {
+        "ms": 4.715
+      },
+      {
+        "ms": 6.58
+      },
+      {
+        "ms": 5.918
+      },
+      {
+        "ms": 6.682
+      },
+      {
+        "ms": 2.901
+      },
+      {
+        "ms": 3.749
+      },
+      {
+        "ms": 3.131
+      },
+      {
+        "ms": 3.801
+      },
+      {
+        "ms": 3.829
+      },
+      {
+        "ms": 4.039
+      },
+      {
+        "ms": 4.276
+      },
+      {
+        "ms": 3.642
+      },
+      {
+        "ms": 4.098
+      },
+      {
+        "ms": 4.068
+      },
+      {
+        "ms": 2.774
+      }
+    ]
+  },
+  "retrieval": {
+    "cases": 12,
+    "top1_correct": 12,
+    "top3_correct": 12,
+    "mrr_at_3": 1.0,
+    "details": [
+      {
+        "q": "Which person supported Persepolis?",
+        "person_id": "mani",
+        "returned_ids": [
+          "mani",
+          "hamid",
+          "hadis"
+        ],
+        "rank": 1,
+        "ms": 27.779,
+        "error": null
+      },
+      {
+        "q": "Who worked as a firefighter in Mashhad?",
+        "person_id": "hamid",
+        "returned_ids": [
+          "hamid",
+          "sarina",
+          "khodanoor"
+        ],
+        "rank": 1,
+        "ms": 13.242,
+        "error": null
+      },
+      {
+        "q": "Who made drawings and worked at a cafe?",
+        "person_id": "nika",
+        "returned_ids": [
+          "nika",
+          "mani",
+          "kian"
+        ],
+        "rank": 1,
+        "ms": 14.185,
+        "error": null
+      },
+      {
+        "q": "Who enjoyed robotics and dreamed of space?",
+        "person_id": "kian",
+        "returned_ids": [
+          "kian",
+          "nika",
+          "mani"
+        ],
+        "rank": 1,
+        "ms": 15.987,
+        "error": null
+      },
+      {
+        "q": "Who took classes to become a tour guide?",
+        "person_id": "neda",
+        "returned_ids": [
+          "neda",
+          "nika",
+          "kian"
+        ],
+        "rank": 1,
+        "ms": 11.198,
+        "error": null
+      },
+      {
+        "q": "Who posted her hopes and everyday life in videos?",
+        "person_id": "sarina",
+        "returned_ids": [
+          "sarina",
+          "hadis",
+          "nika"
+        ],
+        "rank": 1,
+        "ms": 11.403,
+        "error": null
+      },
+      {
+        "q": "Who was a Kurdish woman from Saqqez?",
+        "person_id": "jina",
+        "returned_ids": [
+          "jina",
+          "sarina",
+          "nika"
+        ],
+        "rank": 1,
+        "ms": 10.504,
+        "error": null
+      },
+      {
+        "q": "Who was photographed tied to a pole in detention?",
+        "person_id": "khodanoor",
+        "returned_ids": [
+          "khodanoor",
+          "mani",
+          "jina"
+        ],
+        "rank": 1,
+        "ms": 12.028,
+        "error": null
+      },
+      {
+        "q": "Who posted regularly on TikTok and Instagram?",
+        "person_id": "hadis",
+        "returned_ids": [
+          "hadis",
+          "nika",
+          "kian"
+        ],
+        "rank": 1,
+        "ms": 12.816,
+        "error": null
+      },
+      {
+        "q": "Whose family lived in Salsabil?",
+        "person_id": "mani",
+        "returned_ids": [
+          "mani",
+          "kian",
+          "nika"
+        ],
+        "rank": 1,
+        "ms": 12.819,
+        "error": null
+      },
+      {
+        "q": "Who studied painting in Fardis?",
+        "person_id": "nika",
+        "returned_ids": [
+          "nika",
+          "mani",
+          "khodanoor"
+        ],
+        "rank": 1,
+        "ms": 10.775,
+        "error": null
+      },
+      {
+        "q": "Who attended a demonstration with a music instructor?",
+        "person_id": "neda",
+        "returned_ids": [
+          "neda",
+          "sarina",
+          "mani"
+        ],
+        "rank": 1,
+        "ms": 11.7,
+        "error": null
+      }
+    ]
+  },
+  "answers": {
+    "unique_cases": 16,
+    "passed": 13,
+    "by_expected_status": {
+      "answered": {
+        "cases": 6,
+        "passed": 6
+      },
+      "not_found": {
+        "cases": 6,
+        "passed": 4
+      },
+      "clarify": {
+        "cases": 4,
+        "passed": 3
+      }
+    },
+    "latency_all": {
+      "requests": 80,
+      "successful": 80,
+      "failed": 0,
+      "p50_ms": 82.67,
+      "p95_ms": 153.33,
+      "p99_ms": 190.48
+    },
+    "latency_answerable_questions": {
+      "requests": 30,
+      "successful": 30,
+      "failed": 0,
+      "p50_ms": 99.87,
+      "p95_ms": 133.95,
+      "p99_ms": 153.04
+    },
+    "all_runs_passed": 65,
+    "raw_requests": [
+      {
+        "ms": 133.951,
+        "error": null,
+        "q": "When did Nika participate in the protests?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 109.699,
+        "error": null,
+        "q": "Which football club did Mani support?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 98.322,
+        "error": null,
+        "q": "When did Neda attend the demonstration?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 116.767,
+        "error": null,
+        "q": "When was Khodanoor's pole photograph taken?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 100.322,
+        "error": null,
+        "q": "What did Hamid do for work?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 153.039,
+        "error": null,
+        "q": "Why did she attend demonstrations?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 88.317,
+        "error": null,
+        "q": "What was Mani's favorite film?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 126.921,
+        "error": null,
+        "q": "What was Nika's email password?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 11.366,
+        "error": null,
+        "q": "What is the capital of Canada?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 95.093,
+        "error": null,
+        "q": "What was Hadis's favorite ice cream flavor?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 1.712,
+        "error": null,
+        "q": "When did Hamid first attend a protest?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 74.568,
+        "error": null,
+        "q": "What was Neda's favorite football club?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 1.838,
+        "error": null,
+        "q": "When did she go out?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.435,
+        "error": null,
+        "q": "Where did they live?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.17,
+        "error": null,
+        "q": "When did Mani and Nika protest?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 190.482,
+        "error": null,
+        "q": "What happened to him?",
+        "expected_status": "clarify",
+        "passed": false
+      },
+      {
+        "ms": 107.866,
+        "error": null,
+        "q": "When did Nika participate in the protests?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 94.905,
+        "error": null,
+        "q": "Which football club did Mani support?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 76.04,
+        "error": null,
+        "q": "When did Neda attend the demonstration?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 113.677,
+        "error": null,
+        "q": "When was Khodanoor's pole photograph taken?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 87.306,
+        "error": null,
+        "q": "What did Hamid do for work?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 109.601,
+        "error": null,
+        "q": "Why did she attend demonstrations?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 79.061,
+        "error": null,
+        "q": "What was Mani's favorite film?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 109.816,
+        "error": null,
+        "q": "What was Nika's email password?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 9.861,
+        "error": null,
+        "q": "What is the capital of Canada?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 85.019,
+        "error": null,
+        "q": "What was Hadis's favorite ice cream flavor?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 2.168,
+        "error": null,
+        "q": "When did Hamid first attend a protest?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 71.894,
+        "error": null,
+        "q": "What was Neda's favorite football club?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 1.799,
+        "error": null,
+        "q": "When did she go out?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.999,
+        "error": null,
+        "q": "Where did they live?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.312,
+        "error": null,
+        "q": "When did Mani and Nika protest?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 174.394,
+        "error": null,
+        "q": "What happened to him?",
+        "expected_status": "clarify",
+        "passed": false
+      },
+      {
+        "ms": 114.151,
+        "error": null,
+        "q": "When did Nika participate in the protests?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 87.766,
+        "error": null,
+        "q": "Which football club did Mani support?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 83.738,
+        "error": null,
+        "q": "When did Neda attend the demonstration?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 99.869,
+        "error": null,
+        "q": "When was Khodanoor's pole photograph taken?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 70.77,
+        "error": null,
+        "q": "What did Hamid do for work?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 105.916,
+        "error": null,
+        "q": "Why did she attend demonstrations?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 89.398,
+        "error": null,
+        "q": "What was Mani's favorite film?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 115.791,
+        "error": null,
+        "q": "What was Nika's email password?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 9.694,
+        "error": null,
+        "q": "What is the capital of Canada?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 87.668,
+        "error": null,
+        "q": "What was Hadis's favorite ice cream flavor?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 1.357,
+        "error": null,
+        "q": "When did Hamid first attend a protest?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 73.619,
+        "error": null,
+        "q": "What was Neda's favorite football club?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 1.464,
+        "error": null,
+        "q": "When did she go out?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.05,
+        "error": null,
+        "q": "Where did they live?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.548,
+        "error": null,
+        "q": "When did Mani and Nika protest?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 165.523,
+        "error": null,
+        "q": "What happened to him?",
+        "expected_status": "clarify",
+        "passed": false
+      },
+      {
+        "ms": 118.718,
+        "error": null,
+        "q": "When did Nika participate in the protests?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 78.331,
+        "error": null,
+        "q": "Which football club did Mani support?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 65.664,
+        "error": null,
+        "q": "When did Neda attend the demonstration?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 104.04,
+        "error": null,
+        "q": "When was Khodanoor's pole photograph taken?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 77.258,
+        "error": null,
+        "q": "What did Hamid do for work?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 107.827,
+        "error": null,
+        "q": "Why did she attend demonstrations?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 86.456,
+        "error": null,
+        "q": "What was Mani's favorite film?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 125.064,
+        "error": null,
+        "q": "What was Nika's email password?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 10.954,
+        "error": null,
+        "q": "What is the capital of Canada?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 82.678,
+        "error": null,
+        "q": "What was Hadis's favorite ice cream flavor?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 1.631,
+        "error": null,
+        "q": "When did Hamid first attend a protest?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 73.994,
+        "error": null,
+        "q": "What was Neda's favorite football club?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 1.512,
+        "error": null,
+        "q": "When did she go out?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.9,
+        "error": null,
+        "q": "Where did they live?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.584,
+        "error": null,
+        "q": "When did Mani and Nika protest?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 153.327,
+        "error": null,
+        "q": "What happened to him?",
+        "expected_status": "clarify",
+        "passed": false
+      },
+      {
+        "ms": 114.056,
+        "error": null,
+        "q": "When did Nika participate in the protests?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 82.668,
+        "error": null,
+        "q": "Which football club did Mani support?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 71.236,
+        "error": null,
+        "q": "When did Neda attend the demonstration?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 98.593,
+        "error": null,
+        "q": "When was Khodanoor's pole photograph taken?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 73.583,
+        "error": null,
+        "q": "What did Hamid do for work?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 116.142,
+        "error": null,
+        "q": "Why did she attend demonstrations?",
+        "expected_status": "answered",
+        "passed": true
+      },
+      {
+        "ms": 80.072,
+        "error": null,
+        "q": "What was Mani's favorite film?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 109.029,
+        "error": null,
+        "q": "What was Nika's email password?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 11.039,
+        "error": null,
+        "q": "What is the capital of Canada?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 117.147,
+        "error": null,
+        "q": "What was Hadis's favorite ice cream flavor?",
+        "expected_status": "not_found",
+        "passed": false
+      },
+      {
+        "ms": 1.612,
+        "error": null,
+        "q": "When did Hamid first attend a protest?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 75.097,
+        "error": null,
+        "q": "What was Neda's favorite football club?",
+        "expected_status": "not_found",
+        "passed": true
+      },
+      {
+        "ms": 1.932,
+        "error": null,
+        "q": "When did she go out?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.441,
+        "error": null,
+        "q": "Where did they live?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 1.325,
+        "error": null,
+        "q": "When did Mani and Nika protest?",
+        "expected_status": "clarify",
+        "passed": true
+      },
+      {
+        "ms": 155.661,
+        "error": null,
+        "q": "What happened to him?",
+        "expected_status": "clarify",
+        "passed": false
+      }
+    ],
+    "details": [
+      {
+        "q": "When did Nika participate in the protests?",
+        "person_id": "",
+        "status": "answered",
+        "expected_person": "nika",
+        "answer_contains": [
+          "20 September 2022"
+        ],
+        "passed": true,
+        "response": {
+          "query": "When did Nika participate in the protests?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Abdorrahman Boroumand Center \u00b7 Nika Shakarami",
+              "url": "https://www.iranrights.org/memorial/story/-8756/nika-shakarami"
+            }
+          ],
+          "person_id": "nika",
+          "status": "answered",
+          "answer": "According to the Abdorrahman Boroumand Center, Nika Shakarami took part in street protests in Tehran on 20 September 2022 and disappeared afterward. Her mother said Nika opposed compulsory hijab and the morality patrol, and joined demonstrations over the demands of women and young people. Accounts of her final hours differ; her family disputed the official explanation of her death.",
+          "matched_text": "20 September 2022",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "Which football club did Mani support?",
+        "person_id": "",
+        "status": "answered",
+        "expected_person": "mani",
+        "answer_contains": [
+          "Persepolis"
+        ],
+        "passed": true,
+        "response": {
+          "query": "Which football club did Mani support?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Abdorrahman Boroumand Center \u00b7 Mani Safarpur Chafali",
+              "url": "https://www.iranrights.org/memorial/story/-9095/mani-safarpur-chafali"
+            }
+          ],
+          "person_id": "mani",
+          "status": "answered",
+          "answer": "The Abdorrahman Boroumand Center reports that Mani Safarpour was killed during protests in Tehran's Salsabil neighborhood on the evening of 8 January 2026. Its account does not establish the date he first joined protests. Mani was born on 3 December 2007, supported Persepolis, and was buried in Lafmejan village near Lahijan in Gilan.",
+          "matched_text": "Persepolis",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "When did Neda attend the demonstration?",
+        "person_id": "",
+        "status": "answered",
+        "expected_person": "neda",
+        "answer_contains": [
+          "20 June 2009"
+        ],
+        "passed": true,
+        "response": {
+          "query": "When did Neda attend the demonstration?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Abdorrahman Boroumand Center \u00b7 Neda Aqa Soltan",
+              "url": "https://www.iranrights.org/memorial/story/61073/neda-aqa-soltan"
+            }
+          ],
+          "person_id": "neda",
+          "status": "answered",
+          "answer": "According to the Abdorrahman Boroumand Center, Neda Aqa Soltan attended a demonstration with her music instructor on 20 June 2009. She had joined demonstrations challenging the announced presidential election results. She was shot in Tehran's Kargar neighborhood that evening.",
+          "matched_text": "20 June 2009",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "When was Khodanoor's pole photograph taken?",
+        "person_id": "",
+        "status": "answered",
+        "expected_person": "khodanoor",
+        "answer_contains": [
+          "July 2022"
+        ],
+        "passed": true,
+        "response": {
+          "query": "When was Khodanoor's pole photograph taken?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Factnameh \u00b7 Khodanoor's detention and death",
+              "url": "https://factnameh.com/fa/fact-checks/2022-11-11-iran-khodanour-death"
+            }
+          ],
+          "person_id": "khodanoor",
+          "status": "answered",
+          "answer": "Factnameh traces the photograph of Khodanoor Lajei tied to a pole to an earlier detention in July 2022. The image shows him in Baloch clothing with water placed outside his reach. It is not a photograph of his final moments. Factnameh presents relatives' account that he was wounded the day after Zahedan's Bloody Friday and died in hospital on 2 October 2022, while examining a conflicting official account.",
+          "matched_text": "July 2022",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "What did Hamid do for work?",
+        "person_id": "",
+        "status": "answered",
+        "expected_person": "hamid",
+        "answer_contains": [
+          "firefighter"
+        ],
+        "passed": true,
+        "response": {
+          "query": "What did Hamid do for work?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Iran International \u00b7 How images came to carry Iran's protest dead",
+              "url": "https://www.iranintl.com/en/202602098278"
+            }
+          ],
+          "person_id": "hamid",
+          "status": "answered",
+          "answer": "Iran International reports that Hamid Mahdavi, a firefighter from Mashhad, was killed on 8 January 2026. It describes witness and social-media accounts of him carrying wounded protesters to safety during his final hours. The article says the identity of the man in the widely shared rescue video has not been established with certainty. It does not establish when Hamid first attended a protest.",
+          "matched_text": "firefighter",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "Why did she attend demonstrations?",
+        "person_id": "nika",
+        "status": "answered",
+        "expected_person": "nika",
+        "answer_contains": [
+          "morality",
+          "women"
+        ],
+        "passed": true,
+        "response": {
+          "query": "Why did she attend demonstrations?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Abdorrahman Boroumand Center \u00b7 Nika Shakarami",
+              "url": "https://www.iranrights.org/memorial/story/-8756/nika-shakarami"
+            }
+          ],
+          "person_id": "nika",
+          "status": "answered",
+          "answer": "According to the Abdorrahman Boroumand Center, Nika Shakarami took part in street protests in Tehran on 20 September 2022 and disappeared afterward. Her mother said Nika opposed compulsory hijab and the morality patrol, and joined demonstrations over the demands of women and young people. Accounts of her final hours differ; her family disputed the official explanation of her death.",
+          "matched_text": "over the demands of women and young people",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "What was Mani's favorite film?",
+        "person_id": "",
+        "status": "not_found",
+        "expected_person": "mani",
+        "answer_contains": [],
+        "passed": false,
+        "response": {
+          "query": "What was Mani's favorite film?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Abdorrahman Boroumand Center \u00b7 Mani\u2019s life and documented account",
+              "url": "https://www.iranrights.org/memorial/story/-9095/mani-safarpur-chafali"
+            },
+            {
+              "title": "Iran International \u00b7 Report on Mani Safarpour",
+              "url": "https://www.iranintl.com/fa/202601283936"
+            }
+          ],
+          "person_id": "mani",
+          "status": "answered",
+          "answer": "Mani Safarpour. Mani was 18 and loved football, especially Persepolis. He lived in Tehran\u2019s Salsabil neighborhood and had two sisters. The Abdorrahman Boroumand Center reports that security forces shot and killed him during the protests on 8 January 2026. His family remembered his honesty and kind heart. He was buried near Lahijan, in Gilan.",
+          "matched_text": "football",
+          "evidence_kind": "biography"
+        },
+        "error": null
+      },
+      {
+        "q": "What was Nika's email password?",
+        "person_id": "",
+        "status": "not_found",
+        "expected_person": "nika",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "What was Nika's email password?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "nika",
+          "status": "not_found",
+          "answer": "I couldn't find a supported answer in the archive. Try a more specific question or check the person's linked sources."
+        },
+        "error": null
+      },
+      {
+        "q": "What is the capital of Canada?",
+        "person_id": "",
+        "status": "not_found",
+        "expected_person": "",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "What is the capital of Canada?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "",
+          "status": "not_found",
+          "answer": "I couldn't find a supported answer in the archive. Try a more specific question or check the person's linked sources."
+        },
+        "error": null
+      },
+      {
+        "q": "What was Hadis's favorite ice cream flavor?",
+        "person_id": "",
+        "status": "not_found",
+        "expected_person": "hadis",
+        "answer_contains": [],
+        "passed": false,
+        "response": {
+          "query": "What was Hadis's favorite ice cream flavor?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "ITV News \u00b7 Hadis Najafi",
+              "url": "https://www.itv.com/news/2022-09-30/iranian-tiktoker-hadis-najafi-23-shot-dead-during-demonstrations-in-karaj"
+            }
+          ],
+          "person_id": "hadis",
+          "status": "answered",
+          "answer": "ITV reports that Hadis Najafi regularly posted on TikTok and Instagram. In a video sent to a friend on the night she was killed, she hoped her future self would be happy she had joined the protest. ITV also explains that a viral clip of a woman tying back her hair was misidentified as Hadis; it did not show her final moments.",
+          "matched_text": "Najafi",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      },
+      {
+        "q": "When did Hamid first attend a protest?",
+        "person_id": "",
+        "status": "not_found",
+        "expected_person": "hamid",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "When did Hamid first attend a protest?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "hamid",
+          "status": "not_found",
+          "answer": "The archive does not establish a first-ever protest date. It contains some documented attendance dates; please ask when the person was seen or reported at a protest."
+        },
+        "error": null
+      },
+      {
+        "q": "What was Neda's favorite football club?",
+        "person_id": "",
+        "status": "not_found",
+        "expected_person": "neda",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "What was Neda's favorite football club?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "neda",
+          "status": "not_found",
+          "answer": "I couldn't find a supported answer in the archive. Try a more specific question or check the person's linked sources."
+        },
+        "error": null
+      },
+      {
+        "q": "When did she go out?",
+        "person_id": "",
+        "status": "clarify",
+        "expected_person": "",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "When did she go out?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "",
+          "status": "clarify",
+          "answer": "Please choose a person or include one person's name in your question."
+        },
+        "error": null
+      },
+      {
+        "q": "Where did they live?",
+        "person_id": "",
+        "status": "clarify",
+        "expected_person": "",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "Where did they live?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "",
+          "status": "clarify",
+          "answer": "Please choose a person or include one person's name in your question."
+        },
+        "error": null
+      },
+      {
+        "q": "When did Mani and Nika protest?",
+        "person_id": "",
+        "status": "clarify",
+        "expected_person": "",
+        "answer_contains": [],
+        "passed": true,
+        "response": {
+          "query": "When did Mani and Nika protest?",
+          "mode": "extractive",
+          "sources": [],
+          "person_id": "",
+          "status": "clarify",
+          "answer": "Please choose a person or include one person's name in your question."
+        },
+        "error": null
+      },
+      {
+        "q": "What happened to him?",
+        "person_id": "",
+        "status": "clarify",
+        "expected_person": "",
+        "answer_contains": [],
+        "passed": false,
+        "response": {
+          "query": "What happened to him?",
+          "mode": "extractive",
+          "sources": [
+            {
+              "title": "Abdorrahman Boroumand Center \u00b7 Kian Pirfalak",
+              "url": "https://www.iranrights.org/memorial/story/-8953/kian-pirfalak"
+            }
+          ],
+          "person_id": "kian",
+          "status": "answered",
+          "answer": "The Abdorrahman Boroumand Center describes Kian Pirfalak traveling home in a car with his parents and younger brother in Izeh on 16 November 2022. He was killed when the car came under fire. This account describes a family returning home during unrest, not Kian going out to join a protest. The family blamed security forces, contrary to the official account.",
+          "matched_text": "He was killed when the car came under fire",
+          "evidence_kind": "source_note"
+        },
+        "error": null
+      }
+    ]
+  },
+  "go_tests": {
+    "passed": true,
+    "output": "ok  \tgithub.com/parniayzdin/khaneh/outputs/khaneh-api\t0.065s\tcoverage: 76.3% of statements\n",
+    "coverage_output": "github.com/parniayzdin/khaneh/outputs/khaneh-api/ai.go:15:\tregisterAI\t85.7%\ngithub.com/parniayzdin/khaneh/outputs/khaneh-api/ai.go:26:\taiHandler\t84.4%\ngithub.com/parniayzdin/khaneh/outputs/khaneh-api/main.go:31:\tloadPeople\t100.0%\ngithub.com/parniayzdin/khaneh/outputs/khaneh-api/main.go:52:\twriteJSON\t75.0%\ngithub.com/parniayzdin/khaneh/outputs/khaneh-api/main.go:59:\tnewHandler\t100.0%\ngithub.com/parniayzdin/khaneh/outputs/khaneh-api/main.go:88:\tmain\t\t0.0%\ntotal:\t\t\t\t\t\t\t\t(statements)\t76.3%\n",
+    "statement_coverage_percent": 76.3
+  }
+}
