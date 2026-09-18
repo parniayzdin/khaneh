@@ -64,7 +64,7 @@ function openMemory(id,trigger){
   const person=people.find(p=>p.id===id);if(!person)return;
   if(['hamid','khodanoor'].includes(id) && window.openHamidSculpture){window.openHamidSculpture(person,trigger);return;}
   lastTrigger=trigger;
-  #memoryDialog.dataset.personId=person.id;
+  document.getElementById('memoryDialog').dataset.personId=person.id;
   $('#memoryImage').src=person.image;$('#memoryImage').alt=`Portrait of ${person.name}`;
   $('#memoryName').textContent=person.name;$('#memoryPersian').textContent=person.persian;
   $('#memoryFacts').textContent=`${person.city} · ${person.date}`;
