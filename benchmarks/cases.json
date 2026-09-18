@@ -1,0 +1,180 @@
+{
+  "description": "Small, hand-authored development set. Not a held-out or representative evaluation. Answer checks are substring/status assertions, not human judgments of complete factual correctness.",
+  "retrieval": [
+    {
+      "q": "Which person supported Persepolis?",
+      "person_id": "mani"
+    },
+    {
+      "q": "Who worked as a firefighter in Mashhad?",
+      "person_id": "hamid"
+    },
+    {
+      "q": "Who made drawings and worked at a cafe?",
+      "person_id": "nika"
+    },
+    {
+      "q": "Who enjoyed robotics and dreamed of space?",
+      "person_id": "kian"
+    },
+    {
+      "q": "Who took classes to become a tour guide?",
+      "person_id": "neda"
+    },
+    {
+      "q": "Who posted her hopes and everyday life in videos?",
+      "person_id": "sarina"
+    },
+    {
+      "q": "Who was a Kurdish woman from Saqqez?",
+      "person_id": "jina"
+    },
+    {
+      "q": "Who was photographed tied to a pole in detention?",
+      "person_id": "khodanoor"
+    },
+    {
+      "q": "Who posted regularly on TikTok and Instagram?",
+      "person_id": "hadis"
+    },
+    {
+      "q": "Whose family lived in Salsabil?",
+      "person_id": "mani"
+    },
+    {
+      "q": "Who studied painting in Fardis?",
+      "person_id": "nika"
+    },
+    {
+      "q": "Who attended a demonstration with a music instructor?",
+      "person_id": "neda"
+    }
+  ],
+  "answers": [
+    {
+      "q": "When did Nika participate in the protests?",
+      "person_id": "",
+      "status": "answered",
+      "expected_person": "nika",
+      "answer_contains": [
+        "20 September 2022"
+      ]
+    },
+    {
+      "q": "Which football club did Mani support?",
+      "person_id": "",
+      "status": "answered",
+      "expected_person": "mani",
+      "answer_contains": [
+        "Persepolis"
+      ]
+    },
+    {
+      "q": "When did Neda attend the demonstration?",
+      "person_id": "",
+      "status": "answered",
+      "expected_person": "neda",
+      "answer_contains": [
+        "20 June 2009"
+      ]
+    },
+    {
+      "q": "When was Khodanoor's pole photograph taken?",
+      "person_id": "",
+      "status": "answered",
+      "expected_person": "khodanoor",
+      "answer_contains": [
+        "July 2022"
+      ]
+    },
+    {
+      "q": "What did Hamid do for work?",
+      "person_id": "",
+      "status": "answered",
+      "expected_person": "hamid",
+      "answer_contains": [
+        "firefighter"
+      ]
+    },
+    {
+      "q": "Why did she attend demonstrations?",
+      "person_id": "nika",
+      "status": "answered",
+      "expected_person": "nika",
+      "answer_contains": [
+        "morality",
+        "women"
+      ]
+    },
+    {
+      "q": "What was Mani's favorite film?",
+      "person_id": "",
+      "status": "not_found",
+      "expected_person": "mani",
+      "answer_contains": []
+    },
+    {
+      "q": "What was Nika's email password?",
+      "person_id": "",
+      "status": "not_found",
+      "expected_person": "nika",
+      "answer_contains": []
+    },
+    {
+      "q": "What is the capital of Canada?",
+      "person_id": "",
+      "status": "not_found",
+      "expected_person": "",
+      "answer_contains": []
+    },
+    {
+      "q": "What was Hadis's favorite ice cream flavor?",
+      "person_id": "",
+      "status": "not_found",
+      "expected_person": "hadis",
+      "answer_contains": []
+    },
+    {
+      "q": "When did Hamid first attend a protest?",
+      "person_id": "",
+      "status": "not_found",
+      "expected_person": "hamid",
+      "answer_contains": []
+    },
+    {
+      "q": "What was Neda's favorite football club?",
+      "person_id": "",
+      "status": "not_found",
+      "expected_person": "neda",
+      "answer_contains": []
+    },
+    {
+      "q": "When did she go out?",
+      "person_id": "",
+      "status": "clarify",
+      "expected_person": "",
+      "answer_contains": []
+    },
+    {
+      "q": "Where did they live?",
+      "person_id": "",
+      "status": "clarify",
+      "expected_person": "",
+      "answer_contains": []
+    },
+    {
+      "q": "When did Mani and Nika protest?",
+      "person_id": "",
+      "status": "clarify",
+      "expected_person": "",
+      "answer_contains": []
+    },
+    {
+      "q": "What happened to him?",
+      "person_id": "",
+      "status": "clarify",
+      "expected_person": "",
+      "answer_contains": []
+    }
+  ]
+}
