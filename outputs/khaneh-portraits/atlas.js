@@ -10,7 +10,7 @@ const cities = {
   Zahedan:{fa:'زاهدان',coord:[60.862,29.497]}
 };
 const project = ([lon,lat]) => [345+(lon-44)*27,120+(40-lat)*30.5];
-const slots = [{x:36,y:1,r:2},{x:7,y:13,r:-3},{x:7,y:52,r:2},{x:27,y:65,r:-2},{x:79,y:6,r:3},{x:79,y:37,r:-2},{x:58,y:2,r:-2},{x:78,y:68,r:2},{x:47,y:66,r:2}];
+const slots = [{x:36,y:1,r:2},{x:7,y:13,r:-3},{x:7,y:52,r:2},{x:27,y:65,r:-2},{x:79,y:6,r:3},{x:79,y:37,r:-2},{x:58,y:2,r:-2},{x:67,y:66,r:2},{x:47,y:66,r:2}];
 let lastTrigger = null;
 
 function drawMap(){
@@ -19,7 +19,7 @@ function drawMap(){
   $('#mapLayer').innerHTML=`<defs><clipPath id="iranClip"><path d="${path}"/></clipPath><pattern id="hatching" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 9L9 0" stroke="#bca277" stroke-width=".5" opacity=".16"/></pattern></defs><path class="iran-outline" d="${path}"/><path fill="url(#hatching)" d="${path}"/><g clip-path="url(#iranClip)" class="map-contour">${Array.from({length:11},(_,i)=>`<path d="M${310+i*12} ${170+i*25}Q${510+i*12} ${130+i*21} ${700+i*8} ${360+i*18}T950 590"/>`).join('')}</g><text class="sea-label" x="575" y="192">Caspian Sea</text><text class="sea-label" x="480" y="540" transform="rotate(24 480 540)">Persian Gulf</text><text class="neighbor-label" x="770" y="130">TURKMENISTAN</text><text class="neighbor-label" x="940" y="382">AFGHANISTAN</text><text class="neighbor-label" x="332" y="322">IRAQ</text>`;
   $('#cityPins').innerHTML=Object.entries(cities).map(([city,p])=>{
     const [x,y]=project(p.coord);
-    return `<button class="map-city" data-city="${city}" style="left:${x/12}%;top:${y/7.2}%" aria-label="Show memories from ${city}"><span class="city-dot"></span><span class="city-label">${city}<small lang="fa">${p.fa}</small></span></button>`;
+    return `<button class="map-city" data-city="${city}" style="left:${x/12}%;top:${y/7.2}%" aria-label="Show memories from ${city}"><span class="city-dot"></span><span class="city-label">${city}</span></button>`;
   }).join('');
   $('#threads').innerHTML=people.map((p,i)=>{
     const slot=slots[i%slots.length],end=project(cities[p.city].coord),start=[slot.x*12+82,slot.y*7.2+10];
@@ -34,7 +34,7 @@ function drawMap(){
 
 function makeCard(p,i){
   const s=slots[i%slots.length];
-  return `<button class="memory-card" data-id="${p.id}" style="--x:${s.x}%;--y:${s.y}%;--r:${s.r}deg" aria-label="Read the story of ${escapeHTML(p.name)}"><img class="card-image" src="${escapeHTML(p.image)}" alt="Portrait of ${escapeHTML(p.name)}" decoding="async"><span class="card-label"><span>MEMORY ${String(i+1).padStart(2,'0')}</span><span>${p.id==='hamid'?'3D ↗':'↗'}</span></span><strong class="card-name">${escapeHTML(p.name)}</strong><span class="card-place">${escapeHTML(p.city)} · ${p.year}</span></button>`;
+  return `<button class="memory-card" data-id="${p.id}" style="--x:${s.x}%;--y:${s.y}%;--r:${s.r}deg" aria-label="Read the story of ${escapeHTML(p.name)}"><img class="card-image" src="${escapeHTML(p.image)}" alt="Portrait of ${escapeHTML(p.name)}" decoding="async"><span class="card-label"><span>MEMORY ${String(i+1).padStart(2,'0')}</span><span>${['hamid','khodanoor'].includes(p.id)?'3D ↗':'↗'}</span></span><strong class="card-name">${escapeHTML(p.name)}</strong><span class="card-place">${escapeHTML(p.city)} · ${p.year}</span></button>`;
 }
 function render(){
   const query=$('#search').value.trim().toLocaleLowerCase(),city=$('#cityFilter').value;
@@ -62,7 +62,7 @@ function render(){
 }
 function openMemory(id,trigger){
   const person=people.find(p=>p.id===id);if(!person)return;
-  if(id==='hamid' && window.openHamidSculpture){window.openHamidSculpture(person,trigger);return;}
+  if(['hamid','khodanoor'].includes(id) && window.openHamidSculpture){window.openHamidSculpture(person,trigger);return;}
   lastTrigger=trigger;
   $('#memoryImage').src=person.image;$('#memoryImage').alt=`Portrait of ${person.name}`;
   $('#memoryName').textContent=person.name;$('#memoryPersian').textContent=person.persian;

@@ -6,7 +6,7 @@
   const controls = [...document.querySelectorAll('.sculpture-tools button')];
   controls.forEach(button => button.disabled = true);
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let trigger = null, loaded = false, opening = false, loadFailed = false;
+  let trigger = null, loaded = false, opening = false, loadFailed = false, activeId = '';
   function fittedRadius() {
     const stage=document.getElementById('sculptureStage');
     const aspect=stage.clientWidth/Math.max(1,stage.clientHeight);
@@ -32,6 +32,22 @@
     if (opening || dialog.open) return;
     opening = true;
     trigger = source;
+    const isKhodanoor=person.id==='khodanoor';
+    const asset=isKhodanoor?'khodanoor-seated-white':'hamid-carrying-white';
+    const changed=activeId!==person.id;activeId=person.id;
+    dialog.dataset.personId=person.id;
+    document.getElementById('sculptureName').textContent=person.name;
+    dialog.querySelector('.sculpture-notes').setAttribute('aria-label',person.name+' — memory');
+    const portrait=document.getElementById('sculpturePortrait');portrait.src=person.image;portrait.alt='Portrait of '+person.name;
+    dialog.querySelector('.sculpture-identity span').textContent=person.persian;
+    dialog.querySelector('.sculpture-identity p').textContent=isKhodanoor?'MEMORY 08':'MEMORY 05';
+    dialog.querySelector('.sculpture-date').textContent=person.city+' · '+person.date;
+    dialog.querySelector('.stage-heading p').textContent='IN REMEMBRANCE OF '+(isKhodanoor?'KHODANOOR':'HAMID');
+    dialog.querySelector('.stage-heading h2').textContent=isKhodanoor?'Dignity, unbroken.':'To carry another.';
+    dialog.querySelector('.sculpture-dedication').textContent=isKhodanoor?'A life beyond the image.':'A gesture of care, held in memory.';
+    dialog.querySelector('.sculpture-caption').innerHTML='<strong>ABOUT THE SCULPTURE</strong>'+(isKhodanoor?'A simplified artistic interpretation of the supplied seated-pose drawing. The detention image predates his death; this is not a reconstruction of his final moments.':'An artistic interpretation of the supplied carrying-pose reference, in unpainted white. The pose and facial details are not a verified reconstruction.');
+    dialog.querySelectorAll('a[download]').forEach(link=>{link.href='assets/sculpture/'+asset+(link.href.endsWith('.blend')?'.blend':'.glb');});
+    viewer.alt=isKhodanoor?'White memorial study of a seated man with bowed head, raised knees, and hands restrained beside a pole.':'White memorial sculpture of a man carrying another person.';
     document.getElementById('sculptureStory').textContent = person.story;
     document.getElementById('sculptureSources').replaceChildren(...person.sources.map(record => {
       const link = document.createElement('a');
@@ -42,10 +58,11 @@
     dialog.showModal();
     document.body.style.overflow = 'hidden';
     dialog.querySelector('.sculpture-layout').scrollTop=0;
-    if (!viewer.hasAttribute('src') || loadFailed) {
+    if (changed || !viewer.hasAttribute('src') || loadFailed) {
+      loaded=false;controls.forEach(button=>button.disabled=true);
       loading.hidden=false;
       loading.innerHTML='<span>Entering the sculpture room</span>Preparing the white sculpture…';
-      viewer.setAttribute('src','assets/sculpture/hamid-carrying-white.glb'+(loadFailed?'?retry='+Date.now():''));
+      viewer.setAttribute('src','assets/sculpture/'+asset+'.glb'+(loadFailed?'?retry='+Date.now():''));
       loadFailed=false;
     }
     if(loaded) enterCamera();

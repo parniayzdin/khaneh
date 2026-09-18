@@ -20,7 +20,7 @@
   const pause = panel.querySelector('[data-action="pause"]');
   let mode = 'particles', running = !reduced.matches, ready = false, failed = false;
   let frame = 0, time = 0, previous = 0, yaw = .29, pitch = .12, zoom = 1, count = 40000;
-  let gl, program, uniforms, initialization;
+  let gl, program, uniforms, initialization, buffer, activeId='', generation=0;
   const vertex = `
     attribute vec3 position; attribute vec3 normal; attribute vec2 variation;
     uniform float time, yaw, pitch, aspect, scale, pixelRatio, dotSize;
@@ -51,21 +51,25 @@
     return result;
   }
   async function initialize() {
+    const requestGeneration=++generation, personId=activeId;
     try {
       gl=canvas.getContext('webgl',{alpha:false,antialias:true,preserveDrawingBuffer:false});
       if(!gl) throw Error('WebGL unavailable');
       gl.clearColor(1,1,1,1); gl.clear(gl.COLOR_BUFFER_BIT);
+      if(program)gl.deleteProgram(program);
+      if(buffer)gl.deleteBuffer(buffer);
       program=gl.createProgram();
       gl.attachShader(program,shader(gl.VERTEX_SHADER,vertex));
       gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragment));
       gl.linkProgram(program);
       if(!gl.getProgramParameter(program,gl.LINK_STATUS)) throw Error('Shader link failed');
       gl.useProgram(program);
-      const response=await fetch('assets/sculpture/hamid-particles.json');
+      const response=await fetch('assets/sculpture/'+personId+'-particles.json');
       if(!response.ok) throw Error('Point data unavailable');
       const data=await response.json();
+      if(requestGeneration!==generation)return;
       if(data.count!==48000 || data.points.length!==data.count*8) throw Error('Invalid point data');
-      const buffer=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+      buffer=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
       gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data.points),gl.STATIC_DRAW);
       for(const [name,size,offset] of [['position',3,0],['normal',3,12],['variation',2,24]]) {
         const location=gl.getAttribLocation(program,name); gl.enableVertexAttribArray(location);
@@ -76,6 +80,7 @@
       gl.enable(gl.DEPTH_TEST);
       ready=true; status.hidden=true; update();
     } catch(error) {
+      if(requestGeneration!==generation)return;
       failed=true; status.hidden=false; status.textContent='The particle view could not load. Choose White statue to view the original.';
       console.error('Particle view:',error);
     }
@@ -100,6 +105,8 @@
   }
   function update(){cancelAnimationFrame(frame);previous=0;if(ready&&!failed)frame=requestAnimationFrame(draw);}
   function select(next) {
+    const personId=dialog.dataset.personId||'hamid';
+    if(personId!==activeId){activeId=personId;generation++;ready=false;failed=false;initialization=null;status.hidden=false;status.textContent='Gathering the fragments…';yaw=.29;pitch=.12;zoom=1;}
     mode=next;stage.classList.toggle('show-particles',mode==='particles');panel.hidden=mode!=='particles';
     tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
     if(mode==='particles'&&dialog.open&&!initialization)initialization=initialize();

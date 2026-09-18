@@ -6,8 +6,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="atlas.css?v=2"><link rel="stylesheet" href="persian-theme.css?v=2"><link rel="stylesheet" href="sculpture.css?v=2">
-<script type="module" src="assets/vendor/model-viewer.min.js"></script><script src="assets/data.js?v=3" defer></script><script src="sculpture.js?v=2" defer></script><script src="atlas.js?v=4" defer></script>
-<link rel="stylesheet" href="particles.css?v=1"><script src="particles.js?v=1" defer></script></head>
+<script type="module" src="assets/vendor/model-viewer.min.js"></script><script src="assets/data.js?v=3" defer></script><script src="sculpture.js?v=3" defer></script><script src="atlas.js?v=5" defer></script>
+<link rel="stylesheet" href="particles.css?v=1"><script src="particles.js?v=2" defer></script></head>
 <body>
 <div class="manuscript-edge" aria-hidden="true"></div>
 <div class="page">
@@ -22,10 +22,10 @@
 <div class="archive-toolbar"><span class="eyebrow">THE MEMORY ATLAS</span><div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search names or cities</span><input id="search" type="search" placeholder="Find a name or a city…" autocomplete="off"></label><label class="city-field"><span class="sr-only">Filter by city</span><select id="cityFilter"><option value="">All cities</option></select></label><button class="reset" id="resetFilters" hidden>Clear</button></div></div>
 <div class="atlas-viewport" id="atlasViewport"><div class="atlas-board" id="atlasBoard">
 <div class="painted-corner painted-left" aria-hidden="true"></div><div class="painted-corner painted-right" aria-hidden="true"></div>
-<div class="board-caption"><span>THE MEMORY ATLAS</span><span>People & places of Iran</span></div><div class="compass" aria-hidden="true"><span>N</span>✧</div>
+<div class="compass" aria-hidden="true"><span>N</span>✧</div>
 <svg class="map-layer" id="mapLayer" viewBox="0 0 1200 720" aria-label="Map of Iran; pins represent cities, not exact addresses" role="img"></svg><svg class="thread-layer" id="threads" viewBox="0 0 1200 720" aria-hidden="true"></svg><div id="cityPins"></div><div id="atlasPortraits"></div>
-<div class="atlas-inscription" aria-hidden="true"><span lang="fa">ایران</span><i>A thousand stories.<br>One home.</i></div>
-<div class="board-key"><span class="key-pin"></span> City where the person died <span class="key-thread"></span> A connection to their story</div><div class="board-page">KHANEH / FOLIO 01</div>
+<div class="atlas-inscription" aria-hidden="true"><i>A thousand stories.<br>One home.</i></div>
+
 </div></div>
 <div class="empty-state" id="emptyState" hidden><span>✧</span><h2>No matching memories</h2><p>Try another name or return to all cities.</p><button id="emptyReset">Show all portraits</button></div>
 <div class="archive-status"><span id="resultCount" aria-live="polite"></span><span>Choose a portrait to open its story <span aria-hidden="true">↗</span></span></div>
@@ -34,7 +34,7 @@
 </main>
 <footer><span>KHANEH <span lang="fa">خانه</span> · A home for memory.</span><button id="creditsButton">Sources & artwork credits ↗</button><span class="preview-label">DESIGN PREVIEW / 01</span></footer>
 </div>
-<dialog id="memoryDialog" class="memory-dialog" aria-labelledby="memoryName"><button class="dialog-close" data-close aria-label="Close memory">×</button><div class="memory-art"><img id="memoryImage" alt=""><span id="memoryPersian" lang="fa" dir="rtl"></span></div><div class="memory-copy"><p class="eyebrow">A LIFE REMEMBERED</p><h2 id="memoryName"></h2><p id="memoryFacts" class="memory-facts"></p><p id="memoryStory" class="memory-story"></p><div class="memory-location"><span aria-hidden="true">⌖</span><div><small>CITY OF DEATH</small><strong id="memoryCity"></strong><span>Map pins show cities, not exact locations.</span></div></div><div class="source-block"><span class="eyebrow">SOURCE RECORD</span><div id="memorySources"></div><p id="photoCredit"></p></div></div></dialog>
+<dialog id="memoryDialog" class="memory-dialog" aria-labelledby="memoryName"><button class="dialog-close" data-close aria-label="Close memory">×</button><div class="memory-art"><img id="memoryImage" alt=""><span id="memoryPersian" lang="fa" dir="rtl"></span></div><div class="memory-copy"><p class="eyebrow">A LIFE REMEMBERED</p><h2 id="memoryName"></h2><p id="memoryFacts" class="memory-facts"></p><p id="memoryStory" class="memory-story"></p><div class="memory-location"><span aria-hidden="true">⌖</span><div><small>CITY OF DEATH</small><strong id="memoryCity"></strong></div></div><div class="source-block"><span class="eyebrow">SOURCE RECORD</span><div id="memorySources"></div><p id="photoCredit"></p></div></div></dialog>
 <dialog id="aboutDialog" class="text-dialog" aria-labelledby="aboutTitle"><button class="dialog-close" data-close aria-label="Close about Khaneh">×</button><p class="eyebrow">خانه · HOME</p><h2 id="aboutTitle">A place to remember.</h2><p>Khaneh brings the lives and places of Iran into a shared home for memory. This first atlas connects portraits to the cities where people died during protests, in custody, or in the surrounding violence.</p><p>The visual language draws from Persian illuminated manuscripts: lapis blue, hand-painted gardens, warm paper, and delicate gold borders. Each thread connects a portrait to a city. It does not imply a connection between people.</p><p>The archive spans different years. These selected records are a beginning, not a complete list. Each portrait includes a source; differing accounts are identified in its story.</p></dialog>
 <dialog id="creditsDialog" class="text-dialog credits-dialog" aria-labelledby="creditsTitle"><button class="dialog-close" data-close aria-label="Close sources and credits">×</button><p class="eyebrow">THE ARCHIVE</p><h2 id="creditsTitle">Sources & artwork.</h2><div id="creditsContent"></div></dialog>
 <dialog id="sculptureDialog" class="sculpture-dialog" aria-labelledby="sculptureName">
