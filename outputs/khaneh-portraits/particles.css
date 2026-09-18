@@ -20,3 +20,5 @@
 
 /* Keep the particle presentation free of visible controls. */
 .particle-controls{display:none}
+
+.sculpture-modes{display:none}

@@ -81,7 +81,7 @@
       ready=true; status.hidden=true; update();
     } catch(error) {
       if(requestGeneration!==generation)return;
-      failed=true; status.hidden=false; status.textContent='The particle view could not load. Choose White statue to view the original.';
+      failed=true; status.hidden=false; status.textContent='The particle view could not load. Please reload the page to try again.';
       console.error('Particle view:',error);
     }
   }
@@ -132,7 +132,7 @@
     if(event.key==='ArrowUp')pitch=Math.max(-1.1,pitch-.1);if(event.key==='ArrowDown')pitch=Math.min(1.1,pitch+.1);
     if(event.key==='+'||event.key==='=')zoom=Math.min(2.5,zoom*1.1);if(event.key==='-')zoom=Math.max(.65,zoom/1.1);update();
   });
-  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();failed=true;cancelAnimationFrame(frame);status.hidden=false;status.textContent='Graphics paused. Reload the page or choose White statue.';});
+  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();failed=true;cancelAnimationFrame(frame);status.hidden=false;status.textContent='Graphics paused. Please reload the page.';});
   document.addEventListener('visibilitychange',update);
   new ResizeObserver(update).observe(stage);
   updatePause();select(mode);
