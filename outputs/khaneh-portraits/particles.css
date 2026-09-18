@@ -16,7 +16,7 @@
 .particle-hint{position:absolute;bottom:19px;left:10px;right:10px;text-align:center;font:9px var(--sans);color:#707a74;pointer-events:none}
 .show-particles model-viewer,.show-particles .sculpture-tools,.show-particles .sculpture-hint,.show-particles .sculpture-loading{visibility:hidden;pointer-events:none}
 @media(max-width:900px){.sculpture-modes{top:92px;right:20px}.particle-controls{gap:10px;padding:8px 10px}}
-@media(max-width:600px){.sculpture-stage{height:70dvh;min-height:520px}.sculpture-modes{top:82px;right:18px}.sculpture-modes button{padding:7px 12px}.particle-controls{bottom:40px}.particle-hint{bottom:12px;font-size:8px}}
+@media(max-width:600px){.sculpture-stage{height:52dvh;min-height:360px}.sculpture-modes{top:82px;right:18px}.sculpture-modes button{padding:7px 12px}.particle-controls{bottom:40px}.particle-hint{bottom:12px;font-size:8px}}
 
 /* Keep the particle presentation free of visible controls. */
 .particle-controls{display:none}

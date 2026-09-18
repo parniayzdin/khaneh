@@ -1,4 +1,4 @@
-.sculpture-dialog{width:min(1320px,96vw);height:min(850px,94dvh);max-width:96vw;max-height:94dvh;border:1px solid #c5a661;background:#ede8db;padding:0;overflow:hidden;color:#263247}
+.sculpture-dialog{width:min(1000px,94vw);height:min(720px,94dvh);max-width:94vw;max-height:94dvh;border:1px solid #c5a661;background:#ede8db;padding:0;overflow:hidden;color:#263247}
 .sculpture-dialog[open]{display:flex;flex-direction:column;animation:gallery-arrive .65s cubic-bezier(.16,1,.3,1) both}
 .sculpture-dialog::backdrop{background:#101a2be8;backdrop-filter:blur(8px)}
 .sculpture-header{height:66px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 26px;background:#192b50;color:#eddfb7;border-bottom:3px double #a78c4d;gap:15px}

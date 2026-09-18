@@ -95,10 +95,10 @@
     const w=Math.round(width*dpr), h=Math.round(height*dpr);
     if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
     gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
-    const drawingHeight=Math.max(120,height-195);
-    gl.viewport(0,Math.round(80*dpr),w,Math.round(drawingHeight*dpr));
+    const drawingHeight=Math.max(120,height-140);
+    gl.viewport(0,Math.round(40*dpr),w,Math.round(drawingHeight*dpr));
     const aspect=width/drawingHeight;
-    const values={time,yaw,pitch,aspect,scale:Math.min(.78,aspect*.72)*zoom,pixelRatio:dpr,dotSize:1.35};
+    const values={time,yaw,pitch,aspect,scale:Math.min(.90,aspect*.78)*zoom,pixelRatio:dpr,dotSize:1.35};
     for(const [key,value] of Object.entries(values))gl.uniform1f(uniforms[key],value);
     gl.drawArrays(gl.POINTS,0,count);
     if(running) frame=requestAnimationFrame(draw);
