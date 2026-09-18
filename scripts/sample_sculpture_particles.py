@@ -1,12 +1,13 @@
 """Export a separate point study; never overwrite the source GLB or Blender file.
 Run: blender --background --python scripts/sample_sculpture_particles.py
 """
-import bpy, random, math, bisect, json, hashlib
+import bpy, random, math, bisect, json, hashlib, sys
 from pathlib import Path
 from mathutils import Vector
 
 root = Path(__file__).resolve().parents[1] / 'outputs/khaneh-portraits/assets/sculpture'
-source = root / 'hamid-carrying-white.blend'
+person = 'khodanoor' if '--khodanoor' in sys.argv else 'hamid'
+source = root / ('khodanoor-seated-white.blend' if person=='khodanoor' else 'hamid-carrying-white.blend')
 source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
 bpy.ops.wm.open_mainfile(filepath=str(source), use_scripts=False)
 depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -15,7 +16,7 @@ triangles, cumulative = [], []
 total = 0
 for obj in bpy.context.scene.objects:
     name = obj.name.lower()
-    if obj.type not in ('MESH', 'CURVE') or obj.hide_render or not name.startswith(('carrier', 'passenger')) or any(word in name for word in
+    if obj.type not in ('MESH', 'CURVE') or obj.hide_render or not name.startswith(('carrier', 'passenger', 'khodanoor')) or any(word in name for word in
             ('plinth', 'brow', 'eye', 'lip', 'nose', 'nostril', 'hair strand', 'mouth', 'finger division', 'supporting fingers', 'lace', 'seam', 'stitch', 'zipper', 'knuckle', 'pocket', 'belt loop', 'fold', 'wrinkle', 'sleeve band', 'drawstring')):
         continue
     evaluated = obj.evaluated_get(depsgraph)
@@ -51,7 +52,7 @@ for i in range(48000):
     # Blender Z-up -> browser Y-up, centered on the figure.
     points.extend(round(x, 5) for x in (p.x, p.z, -p.y,
                   normal.x, normal.z, -normal.y, rng.random(), spread))
-output = root / 'hamid-particles.json'
+output = root / (person+'-particles.json')
 output.write_text(json.dumps({'count':48000, 'stride':8, 'points':points,
     'source':source.name, 'sourceSha256':source_hash,
     'description':'Interpretive sculpture surface, detail-weighted sampling with a sparse outer cloud.'}, separators=(',', ':')))
