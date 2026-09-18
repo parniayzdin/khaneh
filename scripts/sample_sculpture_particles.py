@@ -6,8 +6,8 @@ from pathlib import Path
 from mathutils import Vector
 
 root = Path(__file__).resolve().parents[1] / 'outputs/khaneh-portraits/assets/sculpture'
-person = 'khodanoor' if '--khodanoor' in sys.argv else 'hamid'
-source = root / ('khodanoor-seated-white.blend' if person=='khodanoor' else 'hamid-carrying-white.blend')
+person = 'nika' if '--nika' in sys.argv else ('khodanoor' if '--khodanoor' in sys.argv else 'hamid')
+source = root / {'nika':'nika-peace-white.blend','khodanoor':'khodanoor-seated-white.blend','hamid':'hamid-carrying-white.blend'}[person]
 source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
 bpy.ops.wm.open_mainfile(filepath=str(source), use_scripts=False)
 depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -16,7 +16,7 @@ triangles, cumulative = [], []
 total = 0
 for obj in bpy.context.scene.objects:
     name = obj.name.lower()
-    if obj.type not in ('MESH', 'CURVE') or obj.hide_render or not name.startswith(('carrier', 'passenger', 'khodanoor')) or any(word in name for word in
+    if obj.type not in ('MESH', 'CURVE') or obj.hide_render or not name.startswith(('carrier', 'passenger', 'khodanoor', 'nika')) or any(word in name for word in
             ('plinth', 'brow', 'eye', 'lip', 'nose', 'nostril', 'hair strand', 'mouth', 'finger division', 'supporting fingers', 'lace', 'seam', 'stitch', 'zipper', 'knuckle', 'pocket', 'belt loop', 'fold', 'wrinkle', 'sleeve band', 'drawstring')):
         continue
     evaluated = obj.evaluated_get(depsgraph)
