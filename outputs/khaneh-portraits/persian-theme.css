@@ -154,3 +154,7 @@ footer > span:first-child { color: #425a66; }
   .atlas-viewport { padding: 6px; }
   .portrait-grid { gap: 20px 16px; padding: 20px 16px; background-position: 40% center; }
 }
+
+/* Unadorned portrait frames. */
+.memory-card::before{display:none}
+

@@ -34,7 +34,7 @@ function drawMap(){
 
 function makeCard(p,i){
   const s=slots[i%slots.length];
-  return `<button class="memory-card" data-id="${p.id}" style="--x:${s.x}%;--y:${s.y}%;--r:${s.r}deg" aria-label="Read the story of ${escapeHTML(p.name)}"><img class="card-image" src="${escapeHTML(p.image)}" alt="Portrait of ${escapeHTML(p.name)}" decoding="async"><span class="card-label"><span>MEMORY ${String(i+1).padStart(2,'0')}</span><span>${['hamid','khodanoor','nika'].includes(p.id)?'3D ↗':'↗'}</span></span><strong class="card-name">${escapeHTML(p.name)}</strong><span class="card-place">${escapeHTML(p.city)} · ${p.year}</span></button>`;
+  return `<button class="memory-card" data-id="${p.id}" style="--x:${s.x}%;--y:${s.y}%;--r:${s.r}deg" aria-label="Read the story of ${escapeHTML(p.name)}"><img class="card-image" src="${escapeHTML(p.image)}" alt="Portrait of ${escapeHTML(p.name)}" decoding="async"><span class="card-label"><span>MEMORY ${String(i+1).padStart(2,'0')}</span><span>${['hamid','khodanoor'].includes(p.id)?'3D ↗':'↗'}</span></span><strong class="card-name">${escapeHTML(p.name)}</strong><span class="card-place">${escapeHTML(p.city)} · ${p.year}</span></button>`;
 }
 function render(){
   const query=$('#search').value.trim().toLocaleLowerCase(),city=$('#cityFilter').value;
@@ -62,7 +62,7 @@ function render(){
 }
 function openMemory(id,trigger){
   const person=people.find(p=>p.id===id);if(!person)return;
-  if(['hamid','khodanoor','nika'].includes(id) && window.openHamidSculpture){window.openHamidSculpture(person,trigger);return;}
+  if(['hamid','khodanoor'].includes(id) && window.openHamidSculpture){window.openHamidSculpture(person,trigger);return;}
   lastTrigger=trigger;
   $('#memoryImage').src=person.image;$('#memoryImage').alt=`Portrait of ${person.name}`;
   $('#memoryName').textContent=person.name;$('#memoryPersian').textContent=person.persian;
