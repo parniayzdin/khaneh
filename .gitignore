@@ -1,0 +1,17 @@
+work/
+**/target/
+**/var/
+**/__pycache__/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.log
+**/*.blend1
+**/*preview.png
+outputs/khaneh-rasht/
+outputs/khaneh-portraits/portrait-01.png
+outputs/khaneh-portraits/portrait-02.png
+outputs/khaneh-portraits/painting-reference.png
+outputs/khaneh-portraits/app.js
+outputs/khaneh-portraits/styles.css
+outputs/khaneh-portraits/assets/portraits/hamid-mahdavi.png
