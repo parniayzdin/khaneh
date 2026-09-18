@@ -1,4 +1,7 @@
 work/
+**/.venv/
+**/.venv-wsl/
+outputs/khaneh-api/khaneh-api
 **/target/
 **/var/
 **/__pycache__/
