@@ -18,4 +18,6 @@ Unsupported writes return 405. GET routes also support HEAD. CORS permits localh
 
 Records are validated and loaded from `../khaneh-portraits/assets/portraits/records.json` at startup. Restart after edits. Set `KHANEH_RECORDS_PATH` to an absolute path to run elsewhere. `KHANEH_API_ADDR` overrides the default `127.0.0.1:8082`.
 
-The map fetches this API and offers Retry if unavailable. Start its separate frontend with `node scripts/preview.cjs` from the repository root. Python AI search remains independent on port 8001. This version does not forward AI questions or use PostgreSQL. The Java rendering backend remains saved separately.
+The map fetches this API and offers Retry if unavailable. Start its separate frontend with `node scripts/preview.cjs` from the repository root. The Java rendering backend remains saved separately. Records still use JSON, not PostgreSQL.
+
+Go forwards `GET /api/ask`, `GET /api/search`, and `GET /api/ai/health` to the Python AI service on port 8001. Set `KHANEH_AI_URL` to override that address. AI failures return a clear error without affecting the map. See [AI setup](../khaneh-search/README.md) for WSL commands and supported questions.

@@ -58,8 +58,9 @@ func writeJSON(w http.ResponseWriter, status int, value any) {
 }
 func newHandler(people []Person) http.Handler {
 	mux := http.NewServeMux()
+	registerAI(mux)
 	mux.HandleFunc("GET /{$}", func(w http.ResponseWriter, r *http.Request) {
-		writeJSON(w, 200, map[string]any{"service": "Khaneh API", "endpoints": []string{"/health", "/api/people", "/api/people/{id}"}})
+		writeJSON(w, 200, map[string]any{"service": "Khaneh API", "endpoints": []string{"/health", "/api/people", "/api/people/{id}", "/api/ask?q=Who+loved+football%3F", "/api/search?q=football", "/api/ai/health"}})
 	})
 	mux.HandleFunc("GET /health", func(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, 200, map[string]any{"status": "ready", "service": "Khaneh API", "people": len(people), "storage": "json"})
@@ -101,7 +102,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	server := &http.Server{Handler: newHandler(people), ReadHeaderTimeout: 5 * time.Second, ReadTimeout: 10 * time.Second, WriteTimeout: 10 * time.Second, IdleTimeout: 60 * time.Second}
+	server := &http.Server{Handler: newHandler(people), ReadHeaderTimeout: 5 * time.Second, ReadTimeout: 10 * time.Second, WriteTimeout: 35 * time.Second, IdleTimeout: 60 * time.Second}
 	log.Printf("Khaneh API listening at http://%s with %d people", listener.Addr(), len(people))
 	log.Fatal(server.Serve(listener))
 }
