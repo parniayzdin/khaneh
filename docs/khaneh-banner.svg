@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">Khaneh · خانه · A home for memory</title>
+  <desc id="description">An illuminated manuscript inspired banner with a warm ivory centre, lapis blue borders, gold vines, floral rosettes, and mirrored garden branches.</desc>
+  <defs>
+    <pattern id="vine" width="80" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 12Q10 0 20 12T40 12T60 12T80 12M0 12Q10 24 20 12T40 12T60 12T80 12" fill="none" stroke="#c4a666" stroke-width="1"/>
+      <path d="m20 7 5 5-5 5-5-5Zm40 0 5 5-5 5-5-5Z" fill="#d9be7b"/>
+      <circle cx="40" cy="12" r="2" fill="#a8c4b4"/>
+    </pattern>
+    <g id="rosette" stroke="#b99554" stroke-width="1.2">
+      <path d="M0-23 7-15 16-16 15-7 23 0 15 7 16 16 7 15 0 23-7 15-16 16-15 7-23 0-15-7-16-16-7-15Z" fill="#263d72"/>
+      <path d="M0-14C10-13 13-10 14 0 13 10 10 13 0 14-10 13-13 10-14 0-13-10-10-13 0-14Z" fill="#f2e4c5"/>
+      <path d="M0-10C7-5 7 5 0 10-7 5-7-5 0-10ZM-10 0C-5-7 5-7 10 0 5 7-5 7-10 0Z" fill="#698d83"/>
+      <circle r="4" fill="#a3442d"/>
+    </g>
+    <g id="garden" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 103C-35 65-38 15-20-24S5-78-10-112M-14 79C10 58 27 17 18-17M-26 23C-62 6-70-19-59-42M-22-21C0-28 20-55 12-74M-24 49C-9 40 4 39 17 44" fill="none" stroke="#ae8c4e" stroke-width="1.8"/>
+      <g fill="#688d79" stroke="#547763" stroke-width=".8">
+        <path d="M-27 42Q-58 34-53 12-30 16-27 42ZM-30 8Q-9-6-7-28-33-21-30 8ZM-22-27Q-45-35-44-57-20-50-22-27ZM-10-73Q-30-77-29-98-9-89-10-73ZM5 52Q32 56 41 36 17 31 5 52ZM19 12Q38-1 34-19 15-9 19 12ZM-63-20Q-79-22-82-39-64-33-63-20ZM7-55Q33-56 37-74 12-73 7-55Z"/>
+      </g>
+      <g fill="#a3442d" stroke="#8b452f" stroke-width="1">
+        <path d="M-59-42C-81-49-78-68-73-75L-60-62-53-82-46-63-35-71C-35-50-43-42-59-42Z"/>
+        <path d="M18-17C0-24 1-43 6-48L18-37 24-54 31-35 41-43C42-27 32-16 18-17Z"/>
+        <path d="M-10-112C-23-119-22-133-17-138L-9-127-1-144 5-126 12-133C12-119 3-112-10-112Z"/>
+      </g>
+      <g fill="#e5cf97" stroke="#b99554" stroke-width="1">
+        <path d="M17 44Q31 22 45 31 51 42 36 49 24 52 17 44Z"/>
+        <circle cx="-72" cy="26" r="3"/>
+        <circle cx="54" cy="-65" r="3"/>
+        <circle cx="28" cy="-111" r="2"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="1200" height="360" rx="3" fill="#263d72"/>
+  <rect x="7" y="7" width="1186" height="346" fill="none" stroke="#dfc888"/>
+  <path d="M16 23H1184M16 337H1184" stroke="url(#vine)" stroke-width="24"/>
+  <path d="M23 34V326M1177 34V326" stroke="#b99554" stroke-width="1"/>
+  <rect x="38" y="39" width="1124" height="282" fill="#f4ead2" stroke="#d5b773" stroke-width="2"/>
+  <rect x="46" y="47" width="1108" height="266" fill="none" stroke="#b99554" stroke-width=".8"/>
+  <path d="M298 76H500M700 76H902M298 284H500M700 284H902" stroke="#b99554" stroke-width=".8"/>
+  <use href="#rosette" x="70" y="70"/>
+  <use href="#rosette" x="1130" y="70"/>
+  <use href="#rosette" x="70" y="290"/>
+  <use href="#rosette" x="1130" y="290"/>
+  <use href="#garden" transform="translate(212 192)"/>
+  <use href="#garden" transform="translate(988 192) scale(-1 1)"/>
+  <g fill="#263d72" text-anchor="middle">
+    <text x="600" y="153" lang="fa" direction="rtl" font-family="'Noto Naskh Arabic', 'Traditional Arabic', 'Times New Roman', serif" font-size="85">خانه</text>
+    <text x="604" y="207" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="8">KHANEH</text>
+    <text x="600" y="243" fill="#776848" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-style="italic">A home for memory</text>
+  </g>
+  <path d="m600 66 10 10-10 10-10-10Zm0 208 10 10-10 10-10-10Z" fill="none" stroke="#b99554"/>
+  <circle cx="600" cy="76" r="2" fill="#a3442d"/>
+  <circle cx="600" cy="284" r="2" fill="#a3442d"/>
+</svg>
