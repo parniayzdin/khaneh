@@ -54,6 +54,7 @@
     try {
       gl=canvas.getContext('webgl',{alpha:false,antialias:true,preserveDrawingBuffer:false});
       if(!gl) throw Error('WebGL unavailable');
+      gl.clearColor(1,1,1,1); gl.clear(gl.COLOR_BUFFER_BIT);
       program=gl.createProgram();
       gl.attachShader(program,shader(gl.VERTEX_SHADER,vertex));
       gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragment));
