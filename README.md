@@ -44,4 +44,3 @@ Open [Khaneh](http://127.0.0.1:4173/). To enable **Ask the archive**, follow the
 
 </details>
 
-<p><sub>Story sources and artwork credits are included in the app. Portraits and historical artwork belong to their respective owners.</sub></p>
