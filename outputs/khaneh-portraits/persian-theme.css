@@ -158,3 +158,7 @@ footer > span:first-child { color: #425a66; }
 /* Unadorned portrait frames. */
 .memory-card::before{display:none}
 
+
+.card-photo{display:block;overflow:hidden}
+.memory-card[data-id='mani'] .card-image{transform:scale(1.35);transform-origin:50% 20%}
+

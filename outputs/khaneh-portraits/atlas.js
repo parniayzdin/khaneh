@@ -34,7 +34,7 @@ function drawMap(){
 
 function makeCard(p,i){
   const s=slots[i%slots.length];
-  return `<button class="memory-card" data-id="${p.id}" style="--x:${s.x}%;--y:${s.y}%;--r:${s.r}deg" aria-label="Read the story of ${escapeHTML(p.name)}"><img class="card-image" src="${escapeHTML(p.image)}" alt="Portrait of ${escapeHTML(p.name)}" decoding="async"><span class="card-label"><span>MEMORY ${String(i+1).padStart(2,'0')}</span><span>${['hamid','khodanoor'].includes(p.id)?'3D ↗':'↗'}</span></span><strong class="card-name">${escapeHTML(p.name)}</strong><span class="card-place">${escapeHTML(p.city)} · ${p.year}</span></button>`;
+  return `<button class="memory-card" data-id="${p.id}" style="--x:${s.x}%;--y:${s.y}%;--r:${s.r}deg" aria-label="Read the story of ${escapeHTML(p.name)}"><span class="card-photo"><img class="card-image" src="${escapeHTML(p.image)}" alt="Portrait of ${escapeHTML(p.name)}" decoding="async"></span><span class="card-label"><span>MEMORY ${String(i+1).padStart(2,'0')}</span><span>${['hamid','khodanoor'].includes(p.id)?'3D ↗':'↗'}</span></span><strong class="card-name">${escapeHTML(p.name)}</strong><span class="card-place">${escapeHTML(p.city)} · ${p.year}</span></button>`;
 }
 function render(){
   const query=$('#search').value.trim().toLocaleLowerCase(),city=$('#cityFilter').value;
