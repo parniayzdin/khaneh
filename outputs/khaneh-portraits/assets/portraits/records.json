@@ -1,0 +1,113 @@
+[
+  {
+    "id": "jina",
+    "name": "Jina Mahsa Amini",
+    "persian": "ژینا مهسا امینی",
+    "city": "Tehran",
+    "year": 2022,
+    "date": "16 September 2022",
+    "image": "assets/portraits/jina-amini.jpg",
+    "tags": "Mahsa Jina Amini Saqqez",
+    "story": "Jina was a young Kurdish woman from Saqqez who hoped to pursue medical studies. She died in Tehran after being detained by the morality police. Her death became the catalyst for the Woman, Life, Freedom protests.",
+    "credit": "Portrait: IranWire via Reuters / ABC News. Original image is linked in the source article.",
+    "sources": [
+      {
+        "title": "Abdorrahman Boroumand Center · Omid Memorial",
+        "url": "https://www.iranrights.org/memorial/story/-8952/mahsa-jina-amini"
+      },
+      {
+        "title": "ABC News · Mahsa Amini",
+        "url": "https://www.abc.net.au/news/2022-09-23/what-happened-to-mahsa-mini-iran-protests-death-iranian-women/101467612"
+      }
+    ]
+  },
+  {
+    "id": "nika",
+    "name": "Nika Shakarami",
+    "persian": "نیکا شاکرمی",
+    "city": "Tehran",
+    "year": 2022,
+    "date": "September 2022",
+    "image": "assets/portraits/nika-shakarami.jpg",
+    "story": "Nika loved drawing and worked in a Tehran café. Those close to her remembered her independence and artistic talent. She disappeared during the September protests and was later found dead. Her family disputed the authorities’ account; the Omid Memorial documents the differing accounts.",
+    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "sources": [
+      {
+        "title": "Abdorrahman Boroumand Center · Omid Memorial",
+        "url": "https://www.iranrights.org/memorial/story/-8756/nika-shakarami"
+      }
+    ]
+  },
+  {
+    "id": "sarina",
+    "name": "Sarina Esmailzadeh",
+    "persian": "سارینا اسماعیل‌زاده",
+    "city": "Karaj",
+    "year": 2022,
+    "date": "23 September 2022",
+    "image": "assets/portraits/sarina-esmailzadeh.jpg",
+    "story": "Sarina was a student, poet, and video creator who shared her hopes and everyday life online. The Omid Memorial reports that she died after being beaten during protests in Karaj. The record also documents the authorities’ conflicting account.",
+    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "sources": [
+      {
+        "title": "Abdorrahman Boroumand Center · Omid Memorial",
+        "url": "https://www.iranrights.org/memorial/story/-9000/sarina-esmailzadeh"
+      }
+    ]
+  },
+  {
+    "id": "kian",
+    "name": "Kian Pirfalak",
+    "persian": "کیان پیرفلک",
+    "city": "Izeh",
+    "year": 2022,
+    "date": "16 November 2022",
+    "image": "assets/portraits/kian-pirfalak.jpg",
+    "story": "Kian was nine. He loved animals, reading, and imagining a future in space or robotics. He died when his family’s car came under fire in Izeh during the unrest. His family’s account of the shooting differed from the official account.",
+    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "sources": [
+      {
+        "title": "Abdorrahman Boroumand Center · Omid Memorial",
+        "url": "https://www.iranrights.org/memorial/story/-8953/kian-pirfalak"
+      }
+    ]
+  },
+  {
+    "id": "hamid",
+    "name": "Hamid Mahdavi",
+    "persian": "حمید مهدوی",
+    "city": "Mashhad",
+    "year": 2026,
+    "date": "8 January 2026",
+    "image": "assets/portraits/hamid-mahdavi.jpg",
+    "story": "Hamid was a firefighter from Mashhad. Iran International reports that he was killed during the January protests and describes accounts of him helping the wounded. The outlet notes that the identity of the rescuer in widely shared footage has not been confirmed with certainty.",
+    "credit": "Portrait: JavidnamaneVatan, archived by The Iran I Know (item 2269). This is separate from the rescue footage.",
+    "sources": [
+      {
+        "title": "Iran International · Remembering Hamid",
+        "url": "https://www.iranintl.com/en/202602098278"
+      },
+      {
+        "title": "The Iran I Know · Portrait record",
+        "url": "https://theiraniknow.org/item/2269/"
+      }
+    ]
+  },
+  {
+    "id": "neda",
+    "name": "Neda Aqa Soltan",
+    "persian": "ندا آقاسلطان",
+    "city": "Tehran",
+    "year": 2009,
+    "date": "20 June 2009",
+    "image": "assets/portraits/neda-aqa-soltan.jpg",
+    "story": "Neda loved music and travel and had taken classes to become a tour guide. She was shot and killed in Tehran during the protests following the 2009 presidential election. Her memorial record preserves recollections from people who knew her.",
+    "credit": "Portrait reproduced from the Abdorrahman Boroumand Center’s Omid Memorial. Original photographer is not identified in the record.",
+    "sources": [
+      {
+        "title": "Abdorrahman Boroumand Center · Omid Memorial",
+        "url": "https://www.iranrights.org/memorial/story/61073/neda-aqa-soltan"
+      }
+    ]
+  }
+]

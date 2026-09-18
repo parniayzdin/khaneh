@@ -1,0 +1,156 @@
+/* Khaneh's illuminated folio: colours sampled visually from the supplied
+   Persian miniature references. Historical images remain unaltered assets.
+   This layer decorates the atlas and portrait pages, not the white sculpture. */
+:root {
+  --paper: #eee1bf;
+  --ink: #343d39;
+  --muted: #786b51;
+  --wine: #a3442d;
+  --gold: #b58e40;
+  --lapis: #263d72;
+  --line: #c3ad78;
+  --malachite: #4f8072;
+}
+
+body { background: radial-gradient(ellipse at 50% 0, #faf0d6, transparent 68%), var(--paper); }
+.manuscript-edge {
+  height: 19px;
+  border-top: 3px solid #bca158;
+  border-bottom: 3px double #e4c574;
+  background: #24386b url('assets/ornament.svg') center / 85px 29px;
+  box-shadow: 0 2px 0 #967c3e, 0 4px 0 #d5be80;
+}
+.masthead { border-bottom: 3px double #c4ae72; }
+.brand-fa { color: var(--lapis); }
+.brand-en { color: #293b59; }
+.nav-link.active { color: var(--lapis); }
+.nav-link.active:after { height: 2px; background: var(--gold); }
+.dedication { color: #6d745a; }
+.introduction { padding-block: 39px 34px; }
+.introduction h1 { color: #263f46; }
+.introduction h1 em { color: #a1422c; }
+.intro-note { border-left: 3px double #bdab70; }
+.eyebrow { color: #9b432e; }
+.archive-toolbar { border-top: 1px solid #bdab78; }
+.view-switch { background: #dec99555; border-color: #bda66d; }
+.view-switch button.selected { background: #293e75; color: #fff0c7; }
+.search-field input::placeholder { color: #776d58; }
+
+/* A painted manuscript leaf surrounds the map. The centre stays quiet so
+   the city names and fine vermilion threads retain their contrast. */
+.atlas-viewport {
+  padding: 9px;
+  border: 4px double #b8a25f;
+  background: #2c4673 url('assets/ornament.svg') center / 84px 30px;
+  box-shadow: 0 0 0 1px #3d526b, 0 5px 17px #73613c16;
+  scrollbar-color: #b59c58 #e6d5a7;
+}
+.atlas-board {
+  border: 2px solid #d4b469;
+  background-color: #ead9ac;
+  background-image:
+    radial-gradient(ellipse at 49% 40%, #fbf1d4e8 0, #f4e7c4bd 35%, transparent 73%),
+    linear-gradient(0deg, #bca26b1c, transparent 60%),
+    repeating-linear-gradient(0deg, transparent 0 46px, #aa8c510b 47px 48px),
+    repeating-linear-gradient(90deg, transparent 0 46px, #aa8c510b 47px 48px);
+  box-shadow: inset 0 0 0 3px #f4e6bf, inset 0 0 0 4px #bc974e, inset 0 0 55px #b2935e29;
+}
+.atlas-board:after { inset: 10px; border-color: #ac87405c; }
+.painted-corner { filter: none; opacity: .95; }
+.painted-left {
+  left: -1%; bottom: -3%; width: 33%; height: 103%;
+  background-image: url('assets/art/persian-gold-garden-reference.png');
+  background-position: center 48%;
+  mask-image: linear-gradient(90deg, #000 3%, #000b 31%, transparent 98%);
+}
+.painted-right {
+  right: -5%; top: -3%; width: 39%; height: 105%;
+  background-image: url('assets/art/persian-court-garden-reference.png');
+  background-position: 79% 50%;
+  mask-image: linear-gradient(270deg, #000 0%, #000b 28%, transparent 94%);
+}
+.board-caption {
+  padding: 10px 13px;
+  background: #f5e9cce8;
+  border: 1px solid #bc995b;
+  box-shadow: 0 0 0 3px #efe0b3a8, 0 0 0 4px #b997544d;
+}
+.board-caption span:first-child { color: #374975; }
+.board-caption span:last-child { color: #786443; }
+.compass { color: #6b7b61; }
+.iran-outline { fill: #d5d8af55; stroke: #698472; stroke-width: 1.7; }
+.map-contour { stroke: #a4ac82; opacity: .43; }
+.sea-label { fill: #60777e; }
+.neighbor-label { fill: #968968; }
+.memory-thread { stroke: #a34834; opacity: .72; }
+.memory-thread.is-dim { opacity: .08; }
+.city-dot { background: #a33f2c; border-color: #fff0cf; box-shadow: 0 0 0 1px #963b2b, 0 2px 2px #45322033; }
+.city-label { color: #344c49; text-shadow: 0 0 5px #fff2d4, 0 0 5px #fff2d4; }
+.city-label small { color: #927743; }
+.atlas-inscription { color: #b79a59; }
+.atlas-inscription i { color: #8a815a; }
+.board-key, .board-page {
+  padding: 5px 7px;
+  background: #f3e6c6d9;
+  color: #685637;
+  border-block: 1px solid #bda56b70;
+}
+
+/* Individual portraits read as small keepsakes, with no tinted overlays
+   on the faces. Blue and gold are confined to the paper and frame. */
+.memory-card {
+  background: #fbf1d8;
+  border: 1px solid #bb914f;
+  box-shadow: 0 0 0 2px #f4e5ba, 0 0 0 3px #5679749c, 2px 6px 11px #54432636;
+}
+.memory-card:hover, .memory-card:focus-visible {
+  box-shadow: 0 0 0 2px #f4e5ba, 0 0 0 3px #2b4676, 2px 11px 23px #54432647;
+}
+.card-image { filter: none; border-color: #b9a377; }
+.card-label { color: #9b7541; }
+.card-name { color: #29463e; }
+.card-place { color: #6b715a; }
+.portrait-grid {
+  border: 4px double #b69958;
+  gap: 30px;
+  padding: 31px;
+  background-color: #cbbc8b;
+  background-image:
+    linear-gradient(#eee1bcad, #eee1bcad),
+    url('assets/art/persian-palace-reference.png');
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 3px #eee1b5, 0 0 0 1px #435b76;
+}
+.portrait-grid .memory-card { background: #faf0d6; border-bottom: 3px solid #b49651; }
+.portrait-grid .memory-card:before { background: #b3984c5c; }
+.closing-note { border-bottom: 3px double #bfa774; }
+.closing-note .flourish { color: #4f8072; }
+footer > span:first-child { color: #425a66; }
+
+.memory-dialog:not(.statue-dialog) { border: 4px double #b99a53; }
+.memory-dialog .memory-art {
+  background-color: #29433e;
+  background-image: url('assets/art/gulistan-illumination.jpg');
+  background-position: center;
+}
+.memory-dialog .memory-art:before { background: #142a2799; }
+.memory-dialog .memory-art > img {
+  border: 8px solid #f5e6bc;
+  outline: 1px solid #bf9e53;
+  outline-offset: 3px;
+  filter: none;
+}
+.memory-dialog .memory-copy { background: #f4e8c9; }
+
+@media (max-width: 1000px) {
+  .board-caption { padding: 7px 9px; }
+  .board-key, .board-page { padding: 3px 5px; }
+}
+@media (max-width: 640px) {
+  .manuscript-edge { height: 15px; }
+  .introduction { padding-block: 29px 24px; }
+  .intro-note { border-left: 0; }
+  .atlas-viewport { padding: 6px; }
+  .portrait-grid { gap: 20px 16px; padding: 20px 16px; background-position: 40% center; }
+}
