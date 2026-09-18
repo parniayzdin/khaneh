@@ -1,0 +1,19 @@
+.sculpture-stage{background:#fff}
+.sculpture-stage:before{display:none}
+.sculpture-modes{position:absolute;right:24px;top:35px;display:flex;gap:3px;z-index:5;padding:3px;background:#f4f4f2;border:1px solid #deded8;border-radius:30px}
+.sculpture-modes button{border:0;border-radius:24px;background:transparent;padding:9px 14px;font:11px var(--sans);color:#62645e;cursor:pointer}
+.sculpture-modes button[aria-pressed=true]{background:#fff;color:#252c29;box-shadow:0 1px 5px #00000012}
+.particle-panel{position:absolute;inset:0;background:white}
+.particle-panel[hidden]{display:none}
+.particle-panel canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab;outline-offset:-5px}
+.particle-panel canvas:active{cursor:grabbing}
+.particle-status{position:absolute;top:45%;left:15%;right:15%;text-align:center;font:italic 20px var(--serif);color:#565e58}
+.particle-status[hidden]{display:none}
+.particle-controls{position:absolute;bottom:49px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;padding:10px 15px;background:#fffffff2;border:1px solid #e1e1da;border-radius:5px;white-space:nowrap}
+.particle-controls button{font:11px var(--sans);background:none;border:0;color:#3e4842;cursor:pointer;padding:5px 0}
+.particle-controls label{font:10px var(--sans);display:flex;align-items:center;gap:8px;color:#657069}
+.particle-controls input{width:80px;accent-color:#53645b}
+.particle-hint{position:absolute;bottom:19px;left:10px;right:10px;text-align:center;font:9px var(--sans);color:#707a74;pointer-events:none}
+.show-particles model-viewer,.show-particles .sculpture-tools,.show-particles .sculpture-hint,.show-particles .sculpture-loading{visibility:hidden;pointer-events:none}
+@media(max-width:900px){.sculpture-modes{top:92px;right:20px}.particle-controls{gap:10px;padding:8px 10px}}
+@media(max-width:600px){.sculpture-stage{height:70dvh;min-height:520px}.sculpture-modes{top:82px;right:18px}.sculpture-modes button{padding:7px 12px}.particle-controls{bottom:40px}.particle-hint{bottom:12px;font-size:8px}}
