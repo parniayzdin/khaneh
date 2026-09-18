@@ -18,7 +18,12 @@ This project matters to me because I want these lives to be remembered. I brough
 - **A space for remembrance.** Interactive sculpture studies honour Hamid and Khodanoor through artistic interpretations of their stories.
 - **Ask the archive.** Search by meaning and ask questions about the collected stories, with answers drawn from reviewed passages and linked to their sources.
 
-<p align="center"><sub>Go · Python · FastAPI · PyTorch · JavaScript</sub></p>
+## What I used
+
+- **JavaScript, HTML and CSS** for the Persian-inspired interface, interactive map, and portrait stories.
+- **Go** for the REST API that serves memorial records and connects the frontend to the AI service.
+- **Python, FastAPI and PyTorch** for semantic search and source-linked answers, using pretrained models that run locally on CPU.
+- **Blender and WebGL** to create the sculpture models and display them as interactive particle figures in the browser.
 
 <details>
 <summary><strong>Run it locally</strong></summary>
