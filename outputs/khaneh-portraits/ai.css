@@ -1,0 +1,16 @@
+.archive-questions{margin:3rem 0 1rem;padding:2rem;border-top:1px solid #ba9b58;border-bottom:1px solid #ba9b58;max-width:850px}
+.archive-questions h2{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:500;margin:.2rem 0 .7rem}
+.archive-questions p{line-height:1.7}
+.archive-questions form{display:grid;gap:.6rem;margin-top:1.5rem}
+.archive-questions label{font-size:.8rem}
+.archive-questions select,.archive-questions input{font:inherit;padding:.8rem;border:1px solid #b7a989;border-radius:4px;background:#fffaf0;color:#31382e;min-width:0}
+.archive-questions select{max-width:300px;margin-bottom:.6rem}
+.ask-input-row{display:flex;gap:.6rem}.ask-input-row input{flex:1}
+.archive-questions button{font:inherit;cursor:pointer;border:1px solid #64736a;border-radius:4px;padding:.65rem 1rem;background:#43594d;color:white}
+.archive-questions button:disabled{opacity:.6;cursor:wait}
+.ask-examples{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.ask-examples button{background:transparent;color:#43594d;font-size:.75rem;padding:.5rem}
+#askResult:not(:empty){padding:1rem 1.2rem;background:#fffaf0;border-left:3px solid #ba9b58;margin-top:1rem}
+#askResult a{color:#43594d;text-decoration:underline}#askResult li{margin:.5rem 0}
+.archive-questions .ask-scope{font-size:.75rem;color:#6b695c}
+@media(max-width:600px){.archive-questions{padding:1.25rem .8rem}.ask-input-row{flex-direction:column}}
