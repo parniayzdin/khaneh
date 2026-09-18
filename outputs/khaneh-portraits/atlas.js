@@ -1,5 +1,6 @@
 'use strict';
-const {people,geometry,art} = window.KHANEH;
+const {geometry,art} = window.KHANEH;
+let people = [];
 const $ = selector => document.querySelector(selector);
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cities = {
@@ -83,7 +84,31 @@ $('#aboutButton').addEventListener('click',()=>$('#aboutDialog').showModal());$(
 document.querySelectorAll('[data-close]').forEach(button=>button.addEventListener('click',()=>button.closest('dialog').close()));
 document.querySelectorAll('dialog').forEach(dialog=>{dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();});});
 $('#memoryDialog').addEventListener('close',()=>lastTrigger?.focus());
-drawMap();populateCredits();render();
+const loadNotice=document.createElement('div');
+loadNotice.className='api-load-notice';loadNotice.setAttribute('role','status');
+$('#atlasViewport').before(loadNotice);
+async function loadPeople(){
+  $('#search').disabled=true;$('#cityFilter').disabled=true;
+  $('#atlasViewport').hidden=true;$('#emptyState').hidden=true;
+  $('#resultCount').textContent='Loading memories…';loadNotice.textContent='Opening the archive…';
+  try{
+    const host=location.hostname==='localhost'?'localhost':'127.0.0.1';
+    const response=await fetch(`http://${host}:8082/api/people`,{signal:AbortSignal.timeout(8000)});
+    if(!response.ok)throw Error('API returned '+response.status);
+    const records=await response.json();
+    if(!Array.isArray(records)||!records.length||records.some(p=>!p.id||!p.name||!cities[p.city]||!Array.isArray(p.sources)))throw Error('Invalid archive records');
+    const extraCredits=$('#creditsContent').innerHTML;
+    people=records;drawMap();populateCredits();render();
+    $('#creditsContent').insertAdjacentHTML('beforeend',extraCredits);
+    loadNotice.hidden=true;$('#search').disabled=false;$('#cityFilter').disabled=false;
+  }catch(error){
+    $('#resultCount').textContent='Archive unavailable';
+    loadNotice.textContent='The archive could not load. Please check that the Go API is running on port 8082. ';
+    const retry=document.createElement('button');retry.textContent='Try again';retry.addEventListener('click',loadPeople);loadNotice.append(retry);
+    console.error('Archive loading failed:',error);
+  }
+}
+loadPeople();
 document.querySelector('#creditsContent').insertAdjacentHTML('beforeend','<h3>New miniature references</h3><p>The Persian court, garden, and palace paintings used in this study were supplied by the user as visual references. Attribution is to be confirmed.</p><h3>The white sculpture</h3><p>A new Blender study made for Khaneh, interpreted from the supplied carrying-pose image. It is not a verified reconstruction. Interactive viewer: <a href="https://modelviewer.dev/" target="_blank" rel="noopener noreferrer">Google model-viewer</a>, Apache-2.0.</p>');
 
 
