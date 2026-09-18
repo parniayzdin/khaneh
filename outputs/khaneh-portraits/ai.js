@@ -43,7 +43,7 @@
       if (!response.ok) throw Error(data.error || 'The question could not be answered. Please try again.');
       if (typeof data.answer !== 'string' || !Array.isArray(data.sources)) throw Error('The answer could not be loaded. Please try again.');
       result.replaceChildren();
-      const answer = document.createElement('p'); answer.textContent = data.answer; result.append(answer);
+      const answer = document.createElement('p'); answer.textContent = data.answer.replace(/[-\u2010-\u2015]/g, ' '); result.append(answer);
       if (data.status === 'answered') {
         const label = document.createElement('strong'); label.textContent = 'Supporting sources'; result.append(label);
         const list = document.createElement('ul');
@@ -51,7 +51,7 @@
           const url = new URL(source.url);
           if (url.protocol !== 'https:') return;
           const item = document.createElement('li'), link = document.createElement('a');
-          link.href = url.href; link.textContent = source.title;
+          link.href = url.href; link.textContent = source.title.replace(/[-\u2010-\u2015]/g, ' ');
           link.target = '_blank'; link.rel = 'noopener noreferrer'; item.append(link); list.append(item);
         });
         result.append(list);

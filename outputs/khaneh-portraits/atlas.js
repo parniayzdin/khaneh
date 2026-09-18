@@ -69,14 +69,14 @@ function openMemory(id,trigger){
   $('#memoryImage').src=person.image;$('#memoryImage').alt=`Portrait of ${person.name}`;
   $('#memoryName').textContent=person.name;$('#memoryPersian').textContent=person.persian;
   $('#memoryFacts').textContent=`${person.city} · ${person.date}`;
-  $('#memoryStory').textContent=person.story;$('#memoryCity').textContent=person.city;
-  $('#memorySources').innerHTML=person.sources.map(source=>`<a href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.title)} ↗</a>`).join('');
+  $('#memoryStory').textContent=person.story.replace(/[-\u2010-\u2015]/g,' ');$('#memoryCity').textContent=person.city;
+  $('#memorySources').innerHTML=person.sources.map(source=>`<a href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.title.replace(/[-\u2010-\u2015]/g,' '))} ↗</a>`).join('');
   $('#photoCredit').textContent=person.credit;
   $('#memoryDialog').showModal();
 }
 function clearFilters(){$('#search').value='';$('#cityFilter').value='';render();}
 function populateCredits(){
-  $('#creditsContent').innerHTML=`<h3>People & their stories</h3><p>Portraits are reproduced from the linked source records for this private design preview. Copyright remains with the respective owners.</p><ul>${people.map(p=>`<li><strong>${escapeHTML(p.name)}</strong> — ${p.sources.map(s=>`<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.title)}</a>`).join('; ')}<br>${escapeHTML(p.credit)}</li>`).join('')}</ul><h3>The painted pages</h3><p>Historical manuscript artwork from museum open-access collections.</p><ul>${art.map(a=>`<li><a href="${escapeHTML(a.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(a.title)}</a><br>${escapeHTML(a.date)} · ${escapeHTML(a.museum)} · ${escapeHTML(a.license)}</li>`).join('')}</ul><h3>Map</h3><p>Country outline: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth, public domain</a>. The outline is generalized. Pins use approximate city centers. The fine contour lines are decoration, not surveyed topography.</p>`;
+  $('#creditsContent').innerHTML=`<h3>People & their stories</h3><p>Portraits are reproduced from the linked source records for this private design preview. Copyright remains with the respective owners.</p><ul>${people.map(p=>`<li><strong>${escapeHTML(p.name)}</strong> · ${p.sources.map(s=>`<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.title.replace(/[-\u2010-\u2015]/g,' '))}</a>`).join('; ')}<br>${escapeHTML(p.credit)}</li>`).join('')}</ul><h3>The painted pages</h3><p>Historical manuscript artwork from museum open access collections.</p><ul>${art.map(a=>`<li><a href="${escapeHTML(a.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(a.title.replace(/[-\u2010-\u2015]/g,' '))}</a><br>${escapeHTML(a.date.replace(/[-\u2010-\u2015]/g,' '))} · ${escapeHTML(a.museum)} · ${escapeHTML(a.license.replace(/[-\u2010-\u2015]/g,' '))}</li>`).join('')}</ul><h3>Map</h3><p>Country outline: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth, public domain</a>. The outline is generalized. Pins use approximate city centers. The fine contour lines are decoration, not surveyed topography.</p>`;
 }
 $('#search').addEventListener('input',render);$('#cityFilter').addEventListener('change',render);
 $('#resetFilters').addEventListener('click',clearFilters);$('#emptyReset').addEventListener('click',clearFilters);
@@ -109,7 +109,7 @@ async function loadPeople(){
   }
 }
 loadPeople();
-document.querySelector('#creditsContent').insertAdjacentHTML('beforeend','<h3>New miniature references</h3><p>The Persian court, garden, and palace paintings used in this study were supplied by the user as visual references. Attribution is to be confirmed.</p><h3>The white sculpture</h3><p>A new Blender study made for Khaneh, interpreted from the supplied carrying-pose image. It is not a verified reconstruction. Interactive viewer: <a href="https://modelviewer.dev/" target="_blank" rel="noopener noreferrer">Google model-viewer</a>, Apache-2.0.</p>');
+document.querySelector('#creditsContent').insertAdjacentHTML('beforeend','<h3>New miniature references</h3><p>The Persian court, garden, and palace paintings used in this study were supplied by the user as visual references. Attribution is to be confirmed.</p><h3>The white sculpture</h3><p>A new Blender study made for Khaneh, interpreted from the supplied carrying pose image. It is not a verified reconstruction. Interactive viewer: <a href="https://modelviewer.dev/" target="_blank" rel="noopener noreferrer">Google model viewer</a>, Apache 2.0.</p>');
 
 
 

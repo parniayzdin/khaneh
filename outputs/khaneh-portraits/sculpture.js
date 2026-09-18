@@ -37,7 +37,7 @@
     const changed=activeId!==person.id;activeId=person.id;
     dialog.dataset.personId=person.id;
     document.getElementById('sculptureName').textContent=person.name;
-    dialog.querySelector('.sculpture-notes').setAttribute('aria-label',person.name+' — memory');
+    dialog.querySelector('.sculpture-notes').setAttribute('aria-label',person.name+' · memory');
     const portrait=document.getElementById('sculpturePortrait');portrait.src=person.image;portrait.alt='Portrait of '+person.name;
     dialog.querySelector('.sculpture-identity span').textContent=person.persian;
     dialog.querySelector('.sculpture-identity p').textContent=isNika?'MEMORY 02':isKhodanoor?'MEMORY 08':'MEMORY 05';
@@ -45,13 +45,13 @@
     dialog.querySelector('.stage-heading p').textContent='IN REMEMBRANCE OF '+(isNika?'NIKA':isKhodanoor?'KHODANOOR':'HAMID');
     dialog.querySelector('.stage-heading h2').textContent=isNika?'A hand raised for peace.':isKhodanoor?'Dignity, unbroken.':'To carry another.';
     dialog.querySelector('.sculpture-dedication').textContent=isNika?'Her spirit, held in memory.':isKhodanoor?'A life beyond the image.':'A gesture of care, held in memory.';
-    dialog.querySelector('.sculpture-caption').innerHTML='<strong>THE STORY BEHIND THE POSE</strong>'+(isNika?'An artistic tribute inspired by the supplied photograph, with a newly imagined peace-sign gesture. The face is deliberately simplified; this is not a reconstruction of a documented moment.':isKhodanoor?'This seated pose recalls a photograph of Khodanoor during his detention in Zahedan in July 2022. He was bound to a pole, with a cup of water placed beyond his reach.':'The carrying pose honors accounts of Hamid helping wounded protesters during the January 2026 protests. Iran International reports that witnesses described him carrying injured people away from security forces.');
+    dialog.querySelector('.sculpture-caption').innerHTML='<strong>THE STORY BEHIND THE POSE</strong>'+(isNika?'An artistic tribute inspired by the supplied photograph, with a newly imagined peace sign gesture. The face is deliberately simplified; this is not a reconstruction of a documented moment.':isKhodanoor?'This seated pose recalls a photograph of Khodanoor during his detention in Zahedan in July 2022. He was bound to a pole, with a cup of water placed beyond his reach.':'The carrying pose honors accounts of Hamid helping wounded protesters during the January 2026 protests. Iran International reports that witnesses described him carrying injured people away from security forces.');
     dialog.querySelectorAll('a[download]').forEach(link=>{link.href='assets/sculpture/'+asset+(link.href.endsWith('.blend')?'.blend':'.glb');});
     viewer.alt=isNika?'Simple standing memorial figure with short hair and one raised hand forming a peace sign.':isKhodanoor?'White memorial study of a seated man with bowed head, raised knees, and hands restrained beside a pole.':'White memorial sculpture of a man carrying another person.';
-    document.getElementById('sculptureStory').textContent = person.story;
+    document.getElementById('sculptureStory').textContent = person.story.replace(/[-\u2010-\u2015]/g,' ');
     document.getElementById('sculptureSources').replaceChildren(...person.sources.map(record => {
       const link = document.createElement('a');
-      link.href=record.url; link.target='_blank'; link.rel='noopener noreferrer'; link.textContent=record.title+' ↗'; return link;
+      link.href=record.url; link.target='_blank'; link.rel='noopener noreferrer'; link.textContent=record.title.replace(/[-\u2010-\u2015]/g,' ')+' ↗'; return link;
     }));
     const image = source?.querySelector('img');
     const start = image?.getBoundingClientRect();
