@@ -24,10 +24,30 @@ def cord(name,points,radius):
     s=curve.splines.new('BEZIER');s.bezier_points.add(len(points)-1)
     for p,co in zip(s.bezier_points,points):p.co=co;p.handle_left_type='AUTO';p.handle_right_type='AUTO'
     o=bpy.data.objects.new(name,curve);bpy.context.collection.objects.link(o);return finish(o,name)
-# Body on the right, facing left. A bowed head and round tunic carry the gesture.
-oval('seated tunic',(.35,.02,.32),(.24,.23,.31))
-limb('curved torso',(.40,.01,.4),(.16,.02,.91),.205,.19)
-oval('shoulders',(.17,.02,.86),(.205,.22,.17))
+# One continuous long garment, from shoulders to a broad seated hem.
+# Vertical panels cover the hips instead of a separate spherical pelvis.
+profiles=[(.065,.22,.35,.275),(.09,.24,.38,.29),(.17,.25,.38,.29),
+          (.34,.28,.33,.27),(.53,.26,.285,.24),(.73,.20,.24,.22),
+          (.87,.15,.20,.20),(.94,.085,.12,.13),(.97,.06,.075,.09)]
+vertices=[];faces=[];sides=64
+for z,x,rx,ry in profiles:
+    for j in range(sides):
+        angle=2*math.pi*j/sides
+        # A few broad cloth undulations, no stitching or small accessories.
+        ripple=1+.025*math.cos(6*angle)*(1-z)
+        vertices.append((x+rx*math.cos(angle)*ripple,.02+ry*math.sin(angle)*ripple,z))
+for i in range(len(profiles)-1):
+    for j in range(sides):
+        a=i*sides+j;b=i*sides+(j+1)%sides
+        faces.append((a,b,b+sides,a+sides))
+faces.append(tuple(reversed(range(sides))))
+faces.append(tuple((len(profiles)-1)*sides+j for j in range(sides)))
+mesh=bpy.data.meshes.new('Continuous tunic surface');mesh.from_pydata(vertices,[],faces);mesh.update()
+garment=bpy.data.objects.new('Long tunic',mesh);bpy.context.collection.objects.link(garment)
+finish(garment,'long draped tunic')
+modifier=garment.modifiers.new('Soft cloth silhouette','SUBSURF');modifier.levels=2
+bpy.context.view_layer.objects.active=garment
+bpy.ops.object.modifier_apply(modifier=modifier.name)
 limb('neck',(.09,0,.93),(.01,-.015,1.02),.075)
 head=oval('bowed head',(-.025,-.025,1.055),(.14,.135,.175));head.rotation_euler.y=-.38
 oval('simple hair mass',(-.012,.004,1.115),(.145,.14,.12))
